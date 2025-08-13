@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metabolic & Histological Foundations Infographic</title>
+    <style>
+        /* Universal box-sizing for consistent layout */
+        * {
+            box-sizing: border-box;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex; /* Use flexbox for centering body content */
+            justify-content: center; /* Center horizontally */
+            align-items: flex-start; /* Align to top, not center vertically */
+            min-height: 100vh; /* Ensure body takes full viewport height */
+        }
+        .container {
+            max-width: 1200px; /* Max width for content */
+            width: 100%; /* Ensure it takes full width up to max-width */
+            margin: 0 auto; /* Center the container itself */
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            padding-bottom: 40px; /* Add some space at the bottom */
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            grid-column: 1 / -1; /* Span across all grid columns for the main title */
+        }
+        .section {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: #34495e;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+        h3 {
+            color: #e74c3c;
+            margin-top: 25px;
+        }
+        h4 {
+            color: #2980b9;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .question-box {
+            background-color: #ecf0f1;
+            border-left: 5px solid #3498db;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .question-box p {
+            font-style: italic;
+        }
+        .case-title {
+            font-weight: bold;
+            color: #2980b9;
+        }
+        .case-question {
+            margin-top: 10px;
+        }
+        .case-options ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .case-options li {
+            margin: 5px 0;
+        }
+        .feedback {
+            margin-top: 10px;
+            font-weight: bold;
+            padding: 5px;
+            border-radius: 3px;
+        }
+        .feedback.correct {
+            color: #27ae60;
+            background-color: #e0ffe0;
+        }
+        .feedback.incorrect {
+            color: #c0392b;
+            background-color: #ffe0e0;
+        }
+        .image-placeholder {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 0.9em;
+            color: #7f8c8d;
+            border: 1px dashed #ccc;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        ul {
+            list-style-type: '👉 ';
+        }
+        li strong {
+            color: #555;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* MathJax container for rendered equations */
+        mjx-container {
+            display: block;
+            margin: 1em 0;
+            text-align: center;
+            font-size: 1.1em; /* Slightly larger for emphasis */
+            color: #444;
+        }
+        .mnemonic {
+            background-color: #d3f0f7; /* Light blue */
+            border-left: 4px solid #3498db;
+            padding: 10px;
+            margin: 15px 0;
+            font-style: italic;
+            font-weight: bold;
+            color: #2c3e50;
+            border-radius: 5px;
+        }
+        hr {
+            border: none;
+            border-top: 2px dashed #ccc;
+            margin: 40px 0;
+            grid-column: 1 / -1; /* Span across all grid columns for separators */
+        }
+    </style>
+    <!-- MathJax script for rendering LaTeX equations -->
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Metabolic & Histological Foundations</h1>
+
+        <!-- Cellular Energetics Section -->
+        <div class="section">
+            <h2>🧬 Cellular Energetics</h2>
+            <p>This topic explores how our cells manage energy, essentially the study of **energy transformations** in living systems, which forms the **basis of metabolism**. Our bodies constantly perform millions of biochemical processes, all powered by **ATP (adenosine triphosphate)**, the cell's universal energy currency. We derive this ATP by breaking down the chemical energy stored in our food—**carbohydrates, fats, and proteins**.</p>
+            
+            <h3>Bioenergetics: Catabolism & Anabolism</h3>
+            <p>Metabolism involves two fundamental processes that are tightly coupled by ATP:</p>
+            <ul>
+                <li><strong>Catabolism:</strong> The "breaking down" phase 💥. Complex macromolecules from our diet (like glycogen, proteins, and triglycerides) are broken down into simpler, smaller molecules (like glucose and amino acids). This process **releases energy** in the form of ATP. Catabolic reactions are typically **exergonic** (meaning they release free energy and proceed spontaneously), denoted by a **negative change in Gibbs Free Energy (Delta G < 0)**.</li>
+                <li><strong>Anabolism:</strong> This is the "building up" phase 🏗️. It uses the energy (ATP) generated from catabolism to construct complex macromolecules (like new proteins and glycogen stores) from simple precursors. Anabolic reactions **require energy** and are **endergonic** (meaning they need an input of energy to proceed), denoted by a **positive change in Gibbs Free Energy (Delta G > 0)**.</li>
+            </ul>
+            <div class="image-placeholder">
+                <!-- Insert Image: Cellular Energetics - Image 3 (Page 3) showing the overall bioenergetics diagram with ATP coupling catabolism and anabolism. -->
+                <p>Overall Bioenergetics Diagram (Catabolism & Anabolism)</p>
+            </div>
+            <p>Maintaining a **balance (homeostasis)** between these two processes is crucial for health:</p>
+            <ul>
+                <li><strong>Obesity:</strong> Occurs when **energy intake is excessive** (Energy In > Energy Out), leading to the **anabolic storage of surplus energy**, often as fat.</li>
+                <li><strong>Starvation:</strong> The opposite, where **energy stores are depleted** because intake is too low (Energy In < Energy Out). Severe conditions like **Marasmus** (severe calorie deficiency, leading to extreme muscle and fat wasting, "wasting away") and **Kwashiorkor** (primarily protein deficiency, characterized by edema, often in children) result from severe energy and protein imbalance due to malnutrition.</li>
+            </ul>
+            
+            <h3>The Central Role of the TCA Cycle & ETC</h3>
+            <p>The major catabolic pathways converge to generate the bulk of cellular ATP, with the **TCA cycle (Tricarboxylic Acid Cycle, also known as the Krebs Cycle or Citric Acid Cycle)** acting as a central metabolic hub and connector for all macronutrient breakdown. It occurs in the mitochondrial matrix.</p>
+            <ol>
+                <li><strong>Fuel Breakdown & Acetyl-CoA Production:</strong> Carbohydrates (via glycolysis to pyruvate), fats (via beta-oxidation of fatty acids), and proteins (via deamination of amino acids) are all broken down into smaller units that eventually convert into a two-carbon compound called **Acetyl-CoA**.</li>
+                <li><strong>TCA Cycle:</strong> Acetyl-CoA enters the **mitochondrial matrix** and fuels the cyclic reactions of the TCA cycle. While the cycle itself produces only a small amount of ATP directly (2 ATP per glucose molecule via substrate-level phosphorylation), its main job is to capture high-energy electrons onto carrier molecules, specifically generating **NADH** and **FADH₂**. Think of these as the cell's "energy rich intermediate products" or "electron carriers" that need to be cashed in for ATP.</li>
+                <li><strong>Electron Transport Chain (ETC):</strong> This is the **main site of ATP production** and the final destination for the high-energy electrons. The ETC is a series of protein complexes (**Complex I, II, III, IV**) embedded in the **inner mitochondrial membrane**.</li>
+                <li><strong>Oxidative Phosphorylation:</strong> NADH and FADH₂ "cash in" their electrons to the ETC. As electrons are passed down the chain from one complex to the next (a series of redox reactions), energy is released. This energy is used to pump **protons (H+)** from the mitochondrial matrix into the intermembrane space, creating a powerful **electrochemical gradient** (also called the **proton-motive force**). The flow of these protons back into the matrix through an enzyme called **ATP synthase (Complex V)** drives the production of the vast majority of cellular ATP (~28 ATP from a single glucose molecule). This entire process absolutely requires oxygen as the final electron acceptor, hence the term **aerobic respiration**.<br> If the formula below doesn't render, it simply means "The change in Gibbs Free Energy is less than zero".</li>
+            </ol>
+            <div class="image-placeholder">
+                <!-- Insert Image: Cellular Energetics - Image 26 (Page 26) showing the Electron Transport Chain (ETC) within the inner mitochondrial membrane and ATP synthase. -->
+                <p>Mitochondrial Electron Transport Chain and ATP Synthase</p>
+            </div>
+            <p>The TCA cycle is **amphibolic**, meaning it participates in both **catabolism** (breaking down Acetyl-CoA for energy) and **anabolism** (providing intermediate molecules for building other important biomolecules like fatty acids, amino acids, and glucose via gluconeogenesis).</p>
+            
+            <h4>Effects of ETC Inhibitors and Uncouplers:</h4>
+            <ul>
+                <li><strong>ETC Inhibitors:</strong> These compounds directly block specific complexes within the ETC, preventing the flow of electrons.
+                    <div class="mnemonic">
+                        <strong>Mnemonic: CORA blocks the ETC (think of a "cora" or core stopping everything)</strong>
+                        <ul>
+                            <li><strong>C</strong>yanide: Blocks **Complex IV** (Cytochrome c oxidase). Leads to rapid cessation of O₂ utilization, loss of proton gradient, and complete inhibition of ATP synthesis. Highly lethal.</li>
+                            <li><strong>O</strong>ligomycin: Blocks **ATP Synthase (Complex V)** directly. This prevents protons from flowing back into the matrix and inhibits ATP synthesis. The proton gradient *builds up*, and O₂ consumption eventually stops as the ETC backs up.</li>
+                            <li><strong>R</strong>otenone: Blocks **Complex I**.</li>
+                            <li><strong>A</strong>mytal (a barbiturate): Also blocks **Complex I**.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li><strong>Uncouplers of Oxidative Phosphorylation:</strong> These agents dissipate the proton gradient by making the inner mitochondrial membrane permeable to protons, allowing them to re-enter the mitochondrial matrix without passing through ATP synthase. This "uncouples" electron transport from ATP synthesis.
+                    <div class="image-placeholder">
+                        <!-- Insert Image: Cellular Energetics - Image 47 (Page 33) showing pharmacologic and physiologic uncouplers. -->
+                        <p>Pharmacologic and Physiologic Uncouplers</p>
+                    </div>
+                    <ul>
+                        <li>**Pharmacologic Uncouplers** (e.g., **Dinitrophenol [DNP]**, high doses of **aspirin**, pentachlorophenol): These are toxic. They allow electrons to flow through the ETC, so O₂ utilization continues (or even increases), but no ATP is produced. The energy is released as **heat**, leading to symptoms like hyperthermia (fever).</li>
+                        <li>**Physiologic Uncouplers** (e.g., **Thermogenin [UCP1]** in brown adipose tissue [BAT], **UCP2** induced by leptin): These serve a useful purpose, primarily **body heat generation (non-shivering thermogenesis)**. Thermogenin in BAT is activated by norepinephrine, which is important for maintaining body temperature in hibernating mammals, infants, and (to a lesser extent) adults.</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <h3>Sensing Cellular Energy Status</h3>
+            <p>Your cells are remarkably intelligent! They constantly monitor their energy status to keep the **energy charge** stable, ideally around **0.9** (meaning ATP is abundant, and AMP is scarce). The energy charge reflects the proportion of ATP, ADP, and AMP in the cell. If the formula below doesn't render, it shows how the Energy Charge is calculated based on ATP, ADP, and AMP concentrations.</p>
+            $$ \text{Energy Charge} = \frac{[\text{ATP}] + \frac{1}{2}[\text{ADP}]}{[\text{ATP}] + [\text{ADP}] + [\text{AMP}]} $$
+            <p>This intricate balance is maintained through several key players:</p>
+            <ul>
+                <li><strong>Adenylate Kinase (AdK):</strong> This enzyme is a pivotal regulator that rapidly interconverts ATP, ADP, and AMP, maintaining balance within the "adenylate pool." It catalyzes the reversible reaction: **2ADP &lt;--&gt; ATP + AMP**. This ensures that even a small drop in ATP levels is amplified into a much larger relative increase in AMP.</li>
+                <li><strong>AMP as a Critical Sensor:</strong> A drop in ATP (and thus a rise in AMP) acts as a crucial signal of low energy. This activates **AMP-sensors** like **AMP-activated protein kinase (AMPK)**. When activated, AMPK promotes catabolic (ATP-generating) pathways (e.g., glycolysis, fatty acid oxidation) and simultaneously suppresses anabolic (ATP-consuming) pathways (e.g., fatty acid synthesis, cholesterol synthesis), shifting the cell towards energy production.</li>
+                <li><strong>High-Energy Phosphates (e.g., Creatine Phosphate):</strong> Compounds like **creatine phosphate (PCr)** store more energy ($\Delta G^0 = -10.3 \text{ kcal/mol}$) than ATP ($\Delta G^0 = -7.3 \text{ kcal/mol}$). This allows them to quickly regenerate ATP when needed, especially in tissues with high, fluctuating energy demands like skeletal muscle. This process is called **transphosphorylation** and is catalyzed by **creatine kinase (CK)**. Skeletal muscles, for instance, store about 10 times more phosphocreatine than ATP, providing a rapid buffer system for ATP.</li>
+            </ul>
+
+            <h3>Respiratory Quotient (RQ)</h3>
+            <p>The **Respiratory Quotient (RQ)** is a dimensionless ratio that helps estimate what type of fuel your body is primarily burning. It reflects the ratio of carbon dioxide produced to oxygen consumed at the cellular level. If the formula below doesn't render, it means RQ = (CO2 produced) / (O2 consumed).</p>
+            $$RQ = \frac{\text{CO}_2 \text{ produced}}{\text{O}_2 \text{ consumed}}$$
+            <p>Different macronutrients have distinct RQ values because they require different amounts of oxygen for complete oxidation:</p>
+            <ul>
+                <li><strong>Carbohydrates:</strong> For glucose ($\text{C}_6\text{H}_{12}\text{O}_6$), the complete oxidation reaction is: $\text{C}_6\text{H}_{12}\text{O}_6 + 6\text{O}_2 \rightarrow 6\text{CO}_2 + 6\text{H}_2\text{O}$. Thus, the RQ is **1.0** ($6\text{CO}_2 / 6\text{O}_2$).</li>
+                <li><strong>Fats (Lipids):</strong> Fats are more "reduced" (have more hydrogen atoms and fewer oxygen atoms) compared to carbohydrates. This means they require significantly more oxygen to be completely oxidized, but they also release more energy (9 kcal/g vs. 4 kcal/g for carbs). For a typical fatty acid, the RQ is approximately **0.7**.</li>
+                <li><strong>Protein:</strong> The RQ for protein is around **0.82**.</li>
+                <li><strong>Mixed Diet:</strong> A typical mixed meal that includes all macronutrients usually results in an RQ of about **0.85**.</li>
+            </ul>
+            <p>Monitoring RQ can be useful in clinical settings (e.g., in critical care to assess nutritional support) and research to determine substrate utilization.</p>
+
+            <div class="question-box">
+                <div class="case-title">Case Study 1.1: Marathon Runner's Metabolism</div>
+                <p>A marathon runner is nearing the end of a long race. Their body's primary fuel source has shifted significantly from carbohydrates. Which of the following best describes the expected change in their Respiratory Quotient (RQ) and the primary fuel source their body is now oxidizing?</p>
+                <div class="case-options">
+                    <p><strong>Question:</strong> What change in RQ and fuel source would you expect?</p>
+                    <ul>
+                        <li><label><input type="radio" name="q1_1" value="A"> A) RQ increases to 1.0; primarily carbohydrates.</label></li>
+                        <li><label><input type="radio" name="q1_1" value="B"> B) RQ decreases to 0.7; primarily fats.</label></li>
+                        <li><label><input type="radio" name="q1_1" value="C"> C) RQ remains stable at 0.85; mixed fuels.</label></li>
+                        <li><label><input type="radio" name="q1_1" value="D"> D) RQ increases towards 0.82; primarily proteins.</label></li>
+                    </ul>
+                </div>
+                <div class="feedback" id="feedback1_1"></div>
+            </div>
+
+            <div class="question-box">
+                <div class="case-title">Case Study 1.2: Unexplained Fever</div>
+                <p>A patient presents with a persistent, unexplained fever. Further investigation reveals the presence of a drug that acts as an uncoupler of oxidative phosphorylation. Which of the following would be the most likely biochemical finding in this patient?</p>
+                <div class="case-options">
+                    <p><strong>Question:</strong> What biochemical finding would confirm uncoupling?</p>
+                    <ul>
+                        <li><label><input type="radio" name="q1_2" value="A"> A) Decreased oxygen consumption and increased ATP production.</label></li>
+                        <li><label><input type="radio" name="q1_2" value="B"> B) Increased oxygen consumption and decreased ATP production.</label></li>
+                        <li><label><input type="radio" name="q1_2" value="C"> C) Increased proton gradient across the inner mitochondrial membrane.</label></li>
+                        <li><label><input type="radio" name="q1_2" value="D"> D) Normal oxygen consumption with increased heat generation.</label></li>
+                    </ul>
+                </div>
+                <div class="feedback" id="feedback1_2"></div>
+            </div>
+
+            <div class="question-box">
+                <div class="case-title">Case Study 1.3: Energy Depletion</div>
+                <p>During strenuous exercise, muscle cells rapidly deplete their ATP reserves. Which enzyme acts as an immediate sensor of this energy depletion by balancing ATP, ADP, and AMP levels, thus activating pathways to replenish ATP?</p>
+                <div class="case-options">
+                    <p><strong>Question:</strong> Which enzyme is the primary sensor?</p>
+                    <ul>
+                        <li><label><input type="radio" name="q1_3" value="A"> A) ATP Synthase</label></li>
+                        <li><label><input type="radio" name="q1_3" value="B"> B) Hexokinase</label></li>
+                        <li><label><input type="radio" name="q1_3" value="C"> C) Adenylate Kinase</label></li>
+                        <li><label><input type="radio" name="q1_3" value="D"> D) Pyruvate Kinase</label></li>
+                    </ul>
+                </div>
+                <div class="feedback" id="feedback1_3"></div>
+            </div>
+
+            <div class="question-box">
+                <div class="case-title">Case Study 1.4: Cyanide Poisoning</div>
+                <p>A patient is admitted to the emergency room with suspected cyanide poisoning. Cyanide is known to directly inhibit Complex IV of the Electron Transport Chain. Which of the following metabolic consequences would be most immediate and life-threatening?</p>
+                <div class="case-options">
+                    <p><strong>Question:</strong> What is the most immediate consequence?</p>
+                    <ul>
+                        <li><label><input type="radio" name="q1_4" value="A"> A) Increased production of lactate due to anaerobic glycolysis.</label></li>
+                        <li><label><input type="radio" name="q1_4" value="B"> B) A rapid buildup of NADH and FADH2 in the mitochondrial matrix.</label></li>
+                        <li><label><input type="radio" name="q1_4" value="C"> C) A complete halt of ATP production via oxidative phosphorylation.</label></li>
+                        <li><label><input type="radio" name="q1_4" value="D"> D) All of the above are immediate and severe consequences.</label></li>
+                    </ul>
+                </div>
+                <div class="feedback" id="feedback1_4"></div>
+            </div>
+
+            <div class="question-box">
+                <div class="case-title">Case Study 1.5: Metabolic Switching</div>
+                <p>When cellular ATP levels are high, and the energy charge is near 0.9, which of the following metabolic shifts is most likely to occur?</p>
+                <div class="case-options">
+                    <p><strong>Question:</strong> What metabolic shift occurs with high ATP?</p>
+                    <ul>
+                        <li><label><input type="radio" name="q1_5" value="A"> A) Activation of catabolic pathways to produce more ATP.</label></li>
+                        <li><label><input type="radio" name="q1_5" value="B"> B) Inhibition of anabolic pathways to prevent excess storage.</label></li>
+                        <li><label><input type="radio" name="q1_5" value="C"> C) Promotion of anabolic pathways for macromolecule synthesis and energy storage.</label></li>
+                        <li><label><input type="radio" name="q1_5" value="D"> D) Increased activity of the TCA cycle to generate more electron carriers.</label></li>
+                    </ul>
+                </div>
+                <div class="feedback" id="feedback1_5"></div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Glucose Homeostasis Section -->
+        <div class="section">
+            <h2>🍞 Glucose Homeostasis</h2>
+            <p>This topic covers the critical pathways that manage blood glucose levels: **glycolysis** (glucose breakdown), **glycogen metabolism** (glycogenesis for synthesis, glycogenolysis for breakdown), and **gluconeogenesis** (new glucose synthesis).</p>
+            
+            <h3>Glycolysis in Red Blood Cells (Erythrocytes)</h3>
+            <p>Red blood cells (RBCs) are unique because they **have no mitochondria** 🤯. This means they are completely dependent on **glycolysis** in the cytosol for their sole ATP supply. This ATP is vital for maintaining key functions like the Sodium/Potassium-ATPase (Na+/K+-ATPase) pump, which is crucial for the cell's structural integrity, osmotic balance, and preventing cell swelling and rupture.</p>
+            <ul>
+                <li><strong>Anaerobic Glycolysis:</strong> Since there's no oxygen-using mitochondria to regenerate NAD+ (which is essential for glycolysis to continue), RBCs rely heavily on the enzyme **lactate dehydrogenase (LDH)**. This enzyme converts pyruvate into **lactate**, simultaneously oxidizing NADH back to NAD+. This NAD+ can then be reused in glycolysis, allowing it to continue. The lactate produced is then released into the blood.</li>
+                <li><strong>Clinical Significance of Anaerobic Glycolysis:</strong> When tissues throughout the body are starved of oxygen (a state known as **hypoxia**)—due to conditions like severe anemia, cardiac arrest, or extreme exercise—they also switch to anaerobic glycolysis. This leads to a buildup of lactic acid in the blood, resulting in **lactic acidosis**. Clinically, this can manifest with symptoms such as muscle cramps, rapid breathing (tachypnea), nausea, and confusion, indicating insufficient oxygen supply to tissues.</li>
+                <li><strong>Cori Cycle:</strong> The lactate produced by anaerobic glycolysis in muscle or RBCs is not wasted! It can be transported to the **liver**, where it is efficiently converted back into glucose via **gluconeogenesis**. This newly synthesized glucose can then be released back into the bloodstream to be used by other tissues (including muscle and RBCs), completing the **Cori cycle**, which is vital for maintaining blood glucose during prolonged exercise or fasting.</li>
+            </ul>
+
+            <h3>Regulating Hemoglobin's Oxygen Affinity</h3>
+            <p>Glycolysis in RBCs has another crucial role: producing **2,3-Bisphosphoglycerate (2,3-BPG or DPG)**. This molecule is synthesized in the Rapoport-Luebering shunt, a "bypass" of the main glycolytic pathway. 2,3-BPG binds to hemoglobin and plays a critical role in regulating its affinity for oxygen.</p>
+            <div class="image-placeholder">
+                <!-- Insert Image: Glucose Homeostasis - Image 3 (Page 63) showing the Oxygen-Hemoglobin Dissociation Curve. -->
+                <p>Oxygen-Hemoglobin Dissociation Curve</p>
+            </div>
+            <ul>
+                <li><strong>More DPG:</strong> When 2,3-BPG levels are high, it binds to deoxyhemoglobin and **stabilizes the low-oxygen-affinity (Tense or T) state**. This makes it easier for hemoglobin to **release oxygen to the tissues**, shifting the oxygen-hemoglobin dissociation curve to the **right**. This adaptation is particularly helpful in conditions of low oxygen (e.g., at high altitudes or in chronic hypoxia), but it can also make it harder for hemoglobin to load oxygen efficiently in the lungs.</li>
+                <li><strong>Less DPG:</strong> Conversely, low levels of 2,3-BPG result in hemoglobin holding onto oxygen more tightly. This **stabilizes the high-oxygen-affinity (Relaxed or R) state**, shifting the curve to the **left**, leading to impaired oxygen release in peripheral tissues.</li>
+                <li><strong>Fetal Hemoglobin (HbF):</strong> Fetal hemoglobin has a unique structure that causes it to **bind 2,3-BPG poorly** compared to adult hemoglobin (HbA). This reduced binding gives HbF a **higher affinity for oxygen** than HbA, which is physiologically crucial. It allows the fetus to effectively "pull" oxygen from the mother's blood (which has HbA) in the placenta, ensuring adequate oxygen supply for fetal development.</li>
+            </ul>
+
+            <h3>Glycolytic Enzyme Deficiencies</h3>
+            <p>Since RBCs are exclusively reliant on glycolysis for ATP, genetic deficiencies in glycolytic enzymes primarily cause **hemolytic anemia** (premature destruction of RBCs). The underlying mechanism is often insufficient ATP production, which compromises the Na+/K+ pump. This leads to an imbalance of ions, causing the cell to swell, lose its normal biconcave shape (forming abnormal shapes like **echinocytes** or thorny RBCs), and ultimately be recognized and removed prematurely by the spleen (extravascular hemolysis).</p>
+            <ul>
+                <li><strong>Pyruvate Kinase (PK) Deficiency:</strong> This is the **most common** glycolytic enzyme deficiency causing hemolytic anemia. A deficiency in PK (the final enzyme in glycolysis) causes a buildup of upstream glycolytic intermediates, including **2,3-BPG**. The increased 2,3-BPG levels result in a **right shift** of the Hb curve, making it difficult for hemoglobin to load O₂ efficiently in the lungs. Patients often present with chronic hemolytic anemia, jaundice, and splenomegaly. Treatment may involve blood transfusions and sometimes splenectomy.</li>
+                <li><strong>Hexokinase (HK) Deficiency:</strong> This is a rarer but often more severe deficiency. Hexokinase is the first enzyme in glycolysis. Its deficiency not only impairs glycolysis but also indirectly affects the pentose phosphate pathway (PPP), which relies on glucose-6-phosphate. The PPP is vital for producing NADPH, which protects RBCs from oxidative damage. HK deficiency leads to lower 2,3-BPG and a **left shift** of the Hb curve, resulting in impaired O₂ release to tissues.</li>
+            </ul>
+            
+            <h3>Deficient Gluconeogenesis (Ethanol or Genetic Causes)</h3>
+            <p><strong>Gluconeogenesis (GNG)</strong> is the vital metabolic process of synthesizing new glucose from non-carbohydrate precursors. This occurs primarily in the **liver** and, to a lesser extent, in the kidneys. It is absolutely crucial for maintaining blood glucose levels during prolonged fasting, strenuous exercise, or periods of low carbohydrate intake, especially to supply glucose to obligate glucose-dependent tissues like the brain and RBCs when glycogen stores are depleted.</p>
+            <ul>
+                <li><strong>Genetic Defects:</strong> Deficiencies in key gluconeogenic enzymes can severely impair the body's ability to produce glucose from lactate, amino acids, or glycerol. This results in **hypoglycemia** (dangerously low blood sugar), accompanied by **lactatemia** (high blood lactate) and **lactic acidosis**, as lactate cannot be efficiently converted to glucose. Examples include deficiencies in pyruvate carboxylase or fructose-1,6-bisphosphatase.</li>
+                <li><strong>Excess Ethanol Consumption:</strong> This is a clinically important and common cause of impaired gluconeogenesis. The liver metabolizes ethanol in a two-step process catalyzed by alcohol dehydrogenase and aldehyde dehydrogenase. Both steps consume large amounts of **NAD+**, converting it to **NADH**. The reactions of gluconeogenesis, particularly the conversion of lactate to pyruvate, **require NAD+**. The drastic increase in the NADH/NAD+ ratio effectively "starves" the gluconeogenic pathway of its required reactant, thereby shutting it down. Consuming large amounts of alcohol, especially on an empty stomach (when the body is relying on gluconeogenesis to maintain blood glucose), can rapidly lead to **severe hypoglycemia** by inhibiting this critical glucose-producing pathway.</li>
+            </ul>
+
+            <h3>Glycogen Metabolism & Storage Diseases (GSDs)</h3>
+            <p>**Glycogen** is a highly branched polymer of glucose, serving as the primary storage form of carbohydrates in animals. It is found predominantly in two key organs:</p>
+            <ul>
+                <li>**Liver Glycogen:** Approximately 100g (or 6-8% of liver weight). Its primary role is to **maintain blood glucose homeostasis** for the entire body, especially during fasting.</li>
+                <li>**Skeletal Muscle Glycogen:** Approximately 400g (or 1-2% of muscle weight). Its primary role is to provide a rapid, localized energy source for **muscle contraction** during exercise. Muscle glycogen cannot directly contribute to blood glucose because muscle lacks glucose-6-phosphatase.</li>
+            </ul>
+            <p>Glycogen Storage Diseases (GSDs) are a group of genetic disorders caused by inherited defects in the enzymes involved in either synthesizing (glycogenesis) or breaking down (glycogenolysis) glycogen. Most GSDs are due to decreased degradation, leading to abnormal glycogen accumulation in various tissues.</p>
+            <h4>Glycogen Synthesis (Glycogenesis):</h4>
+            <ul>
+                <li>Initiation involves **glycogenin**, a protein that acts as a primer by autocatalyzing the attachment of the first few glucose units.</li>
+                <li>**Glycogen synthase** (a key regulated enzyme) extends the glycogen chain by adding glucose units from **UDP-glucose** (the activated glucose donor) via alpha(1-4) glycosidic bonds.</li>
+                <li>**Branching enzyme** (amylo-(alpha)1,4 --> (alpha)1,6-transglucosidase or alpha(1-4) to alpha(1-6) transferase) creates the alpha(1-6) branch points. These branches are crucial for increasing glycogen's solubility and creating numerous terminal ends, allowing for rapid synthesis and degradation.</li>
+            </ul>
+            <h4>Glycogen Breakdown (Glycogenolysis):</h4>
+            <ul>
+                <li>**Glycogen phosphorylase** (another key regulated enzyme) breaks the alpha(1-4) glycosidic bonds, releasing **glucose-1-phosphate** from the ends of the glycogen chains using inorganic phosphate (a phosphorylolytic reaction).</li>
+                <li>**Debranching enzyme** is a bifunctional enzyme with two activities: it transfers alpha(1-4) linked glucose units from a branch to an existing chain, and then it hydrolyzes the alpha(1-6) branch point, releasing one free glucose molecule.</li>
+            </ul>
+            <div class="image-placeholder">
+                <!-- Insert Image: Glucose Homeostasis - Image 51 (Page 51) showing the overall pathways of Glycogenesis and Glycogenolysis. -->
+                <p>Glycogen Metabolism Pathway</p>
+            </div>
+            <h4>Regulation of Glycogen Metabolism:</h4>
+            <p>Glycogen metabolism is tightly regulated by both allosteric modulators and hormones to match the body's energy needs.</p>
+            <ul>
+                <li><strong>Allosteric Regulation:</strong>
+                    <ul>
+                        <li>**Glucose-6-phosphate** acts as a positive allosteric activator of glycogen synthase and an inhibitor of glycogen phosphorylase, promoting glycogen synthesis when glucose is abundant.</li>
+                        <li>**AMP** acts as a positive allosteric activator of muscle phosphorylase, signaling low energy states and stimulating glycogen breakdown for ATP production during exercise.</li>
+                        <li>**Calcium (Ca2+)**: Acts as an allosteric activator of phosphorylase kinase in both liver and muscle, leading to phosphorylation and activation of glycogen phosphorylase. In muscle, Ca2+ release during contraction directly stimulates glycogenolysis.</li>
+                    </ul>
+                </li>
+                <li><strong>Hormonal Regulation (via Phosphorylation/Dephosphorylation):</strong>
+                    <ul>
+                        <li>**Glucagon:** The "glucose is gone" hormone. Released from pancreatic alpha cells when blood glucose is low. Acts primarily on the **liver** (muscle cells lack glucagon receptors). Glucagon binding activates a G-protein coupled receptor, increasing cAMP and activating Protein Kinase A (PKA). PKA then phosphorylates and **inhibits glycogen synthase**, while also phosphorylating and **activating phosphorylase kinase**, which in turn phosphorylates and activates glycogen phosphorylase. The net effect is to stimulate **hepatic glycogenolysis** and glucose release into the blood.</li>
+                        <li>**Insulin:** Released from pancreatic beta cells when blood glucose is high (fed state). Promotes glucose uptake into cells (especially muscle and adipose) and activates protein phosphatases that **dephosphorylate and activate glycogen synthase**, promoting glycogenesis. Insulin also inhibits gluconeogenesis and glycogenolysis, driving glucose utilization and storage.</li>
+                        <li>**Epinephrine (Adrenaline):** The "fight or flight" hormone. Acts on both **liver** and **muscle**. In liver, epinephrine's actions (via alpha-adrenergic receptors leading to Ca2+ release and activation of phosphorylase kinase, and beta-adrenergic receptors activating PKA) are similar to glucagon, stimulating glucose release. In muscle, epinephrine primarily stimulates glycogenolysis via beta-adrenergic receptors and PKA activation, providing rapid fuel for muscle contraction.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h4>Common Glycogen Storage Diseases (GSDs):</h4>
+            <p>These genetic disorders lead to abnormal glycogen accumulation due to defective enzymes. Symptoms vary depending on the affected tissue (liver, muscle, or generalized).</p>
+            <div class="mnemonic">
+                <strong>Mnemonics for GSDs:</strong>
+                <ul>
+                    <li><strong>Liver-Centric GSDs (Hypoglycemia & Hepatomegaly):</strong>
+                        <ul>
+                            <li><strong>V</strong>on Gierke (Type I): <strong>V</strong>ery severe, <strong>V</strong>ery low glucose (Deficient: **Glucose-6-phosphatase**)</li>
+                            <li><strong>H</strong>ers (Type VI): <strong>H</strong>er liver is <strong>H</strong>eavy (Deficient: **Liver Phosphorylase**)</li>
+                            <li><strong>C</strong>ori (Type III): <strong>C</strong>ori's shorter <strong>C</strong>hains (Deficient: **Debranching Enzyme**)</li>
+                            <li><strong>A</strong>ndersen (Type IV): <strong>A</strong>bnormally branched/Amylopectinosis (Deficient: **Branching Enzyme**)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Muscle-Centric GSDs (Exercise Intolerance, Cramping, Weakness):</strong>
+                        <ul>
+                            <li><strong>M</strong>cArdle (Type V): <strong>M</strong>uscle cramps, <strong>M</strong>yoglobinuria (Deficient: **Muscle Phosphorylase**)</li>
+                            <li><strong>T</strong>auri (Type VII): <strong>T</strong>ired muscles (Deficient: **PFK-1** - Muscle Phosphofructokinase)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Generalized GSDs:</strong>
+                        <ul>
+                            <li><strong>P</strong>ompe (Type II): <strong>P</strong>umped-up heart, **P**oor muscle tone (Deficient: **Lysosomal alpha-Glucosidase/Acid Maltase**)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <ul>
+                <li><strong>Liver-Centric GSDs (Typically present with Hepatomegaly and Fasting Hypoglycemia):</strong>
+                    <ul>
+                        <li><strong>Von Gierke Disease (Type I):</strong> The **most severe** GSD. Caused by a deficiency in **glucose-6-phosphatase** (or its translocase system). This enzyme is the final common step for both glycogenolysis and gluconeogenesis to release free glucose into the blood. Patients experience profound fasting **hypoglycemia**, massive **hepatomegaly**, lactic acidosis, hyperlipidemia, and hyperuricemia (gout-like symptoms). Management involves frequent feedings or continuous nocturnal glucose infusion.</li>
+                        <li><strong>Hers Disease (Type VI):</strong> A milder form. Caused by a deficiency in **liver phosphorylase**. This primarily affects glycogen breakdown in the liver. Patients have **hepatomegaly** and mild hypoglycemia, but gluconeogenesis is still functional, making symptoms less severe than Type I.</li>
+                        <li><strong>Cori Disease (Type III):</strong> Deficiency in the **debranching enzyme**. Leads to the accumulation of abnormally structured glycogen with very short outer branches. Symptoms are similar to Type I but generally milder, including hypoglycemia, hepatomegaly, and some muscle weakness.</li>
+                        <li><strong>Andersen Disease (Type IV):</strong> Deficiency in the **branching enzyme**. Results in the formation of glycogen with abnormally long, unbranched chains (resembling amylopectin). This abnormal structure often elicits an immune response, leading to severe **cirrhosis** (scarring) of the liver and heart involvement. Patients usually die before 2 years of age, and liver transplant is often the only viable treatment.</li>
+                    </ul>
+                </li>
+                <li><strong>Muscle-Centric GSDs (Typically present with Exercise Intolerance, Muscle Cramping, and Weakness):</strong>
+                    <ul>
+                        <li><strong>McArdle Disease (Type V):</strong> Caused by a deficiency in **muscle phosphorylase**. Patients experience painful muscle cramps, weakness, and fatigue during strenuous exercise. A characteristic finding is the "second wind" phenomenon, where after a brief rest, they can resume exercise (as fatty acid oxidation becomes the primary fuel). They famously **fail to produce lactate** during exercise because their muscles cannot break down glycogen for glycolysis. Severe cases can lead to **rhabdomyolysis** (muscle breakdown) and myoglobinuria (myoglobin in urine), which can cause kidney damage.</li>
+                        <li><strong>Tauri Disease (Type VII):</strong> Caused by a deficiency in **muscle phosphofructokinase (PFK-1)**, a key glycolytic enzyme. Presents with symptoms very similar to McArdle disease, including muscle pain, weakness, and cramping during exercise. The accumulation of glucose-6-phosphate (upstream of PFK-1) inhibits muscle phosphorylase and activates glycogen synthase, leading to glycogen accumulation.</li>
+                    </ul>
+                </li>
+                <li><strong>Generalized GSDs:</strong>
+                    <ul>
+                        <li><strong>Pompe Disease (Type II):</strong> Unique among GSDs, it's a **lysosomal storage disease**. It's caused by a deficiency in **lysosomal alpha-glucosidase (acid maltase)**. This enzyme normally degrades glycogen in lysosomes. Its deficiency leads to glycogen accumulation in lysosomes in many tissues, particularly the **heart** (leading to massive cardiomegaly and cardiac failure), liver, and skeletal muscle. Infantile-onset Pompe disease is typically fatal in early childhood due to heart failure if untreated. It is one of the few GSDs for which effective **enzyme replacement therapy (ERT)** (e.g., Myozyme) is available, a development that gained public attention through the movie "Extraordinary Measures."</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="question-box">
+                <div class="case-title">Case Study 2.1: Infant with Hypoglycemia</div>
+                <p>A 6-month-old infant presents with severe fasting hypoglycemia, hepatomegaly, and lactic acidosis. Blood tests show an inability to convert lactate into glucose. The most likely diagnosis is a deficiency in which enzyme?</p>
+                <div class="case-options">
+                    <p><strong>Question:</strong> Which enzyme deficiency explains these symptoms?</p>
+                    <ul>
+                        <li><label><input type="radio" name="q2_1" value="A"> A) Muscle phosphorylase</label></li>
+                        <li><label><input type="radio" name="q2_1" value="B"> B) Glucose-6-phosphatase</label></li>
+                        <li><label><input type="radio" name="q2_1" value="C"> C) Pyruvate kinase</label></li>
+                        <li><label><input type="radio" name="q2_1" value="D"> D) Liver phosphorylase</label></li>
+                    </ul>
+                </div>
+                <div class="feedback" id="feedback2_1"></div>
+            </div>
+
+            <div class="question-box">
+                <div class="case-title">Case Study 2.2: The Post-Workout Burn</div>
+                <p>A physically active individual experiences significant muscle cramps and a "burning" sensation after intense anaerobic exercise. This sensation is primarily due to the accumulation of which metabolic product?</p>
+                <div class="case-options">
+                    <p><strong>Question:</strong> What causes the burning sensation?</p>
+                    <ul>
+                        <li><label><input type="radio" name="q2_2" value="A"> A) Acetyl-CoA</label></li>
+                        <li><label><input type="radio" name="q2_2" value="B"> B) Citrate</label></li>
+                        <li><label><input type="radio" name="q2_2" value="C"> C) Lactate</label></li>
+                        <li><label><input type="radio" name="q2_2" value="D"> D) Glucose-6-phosphate</label></li>
+                    </ul>
+                </div>
+                <div class="feedback" id="feedback2_2"></div>
+            </div>
+
+            <div class="question-box">
+                <div class="case-title">Case Study 2.3: Altitude Sickness Adaptation</div>
+                <p>A person rapidly ascends to a high altitude. Over several days, their red blood cells adapt to the lower oxygen partial pressure. This adaptation primarily involves an increase in the production of which glycolytic intermediate?</p>
+                <div class="case-options">
+                    <p><strong>Question:</strong> Which intermediate increases to help adapt?</p>
+                    <ul>
+                        <li><label><input type="radio" name="q2_3" value="A"> A) Pyruvate</label></li>
+                        <li><label><input type="radio" name="q2_3" value="B"> B) 1,3-Bisphosphoglycerate</label></li>
+                        <li><label><input type="radio" name="q2_3" value="C"> C) 2,3-Bisphosphoglycerate</label></li>
+                        <li><label><input type="radio" name="q2_3" value="D"> D) Fructose-1,6-bisphosphate</label></li>
+                    </ul>
+                </div>
+                <div class="feedback" id="feedback2_3"></div>
+            </div>
+
+            <div class="question-box">
+                <div class="case-title">Case Study 2.4: Chronic Alcohol Abuse</div>
+                <p>A chronic alcoholic patient is brought to the emergency room in a state of severe hypoglycemia after a prolonged drinking binge without food. This is primarily due to the metabolism of ethanol in the liver affecting which of the following processes?</p>
+                <div class="case-options">
+                    <p><strong>Question:</strong> Which process is inhibited by ethanol metabolism?</p>
+                    <ul>
+                        <li><label><input type="radio" name="q2_4" value="A"> A) Glycogen synthesis</label></li>
+                        <li><label><input type="radio" name="q2_4" value="B"> B) Fatty acid oxidation</label></li>
+                        <li><label><input type="radio" name="q2_4" value="C"> C) Gluconeogenesis</label></li>
+                        <li><label><input type="radio" name="q2_4" value="D"> D) Glycolysis in red blood cells</label></li>
+                    </ul>
+                </div>
+                <div class="feedback" id="feedback2_4"></div>
+            </div>
+
+            <div class="question-box">
+                <div class="case-title">Case Study 2.5: Muscle Cramps Post-Exercise</div>
+                <p>A patient complains of severe muscle cramping and weakness during exercise. A muscle biopsy shows abnormally high glycogen content and a lack of muscle phosphorylase activity. This clinical picture is most consistent with which glycogen storage disease?</p>
+                <div class="case-options">
+                    <p><strong>Question:</strong> Which GSD matches these findings?</p>
+                    <ul>
+                        <li><label><input type="radio" name="q2_5" value="A"> A) Pompe Disease (Type II)</label></li>
+                        <li><label><input type="radio" name="q2_5" value="B"> B) Hers Disease (Type VI)</label></li>
+                        <li><label><input type="radio" name="q2_5" value="C"> C) McArdle Disease (Type V)</label></li>
+                        <li><label><input type="radio" name="q2_5" value="D"> D) Von Gierke Disease (Type I)</label></li>
+                    </ul>
+                </div>
+                <div class="feedback" id="feedback2_5"></div>
+            </div>
+
+            <div class="question-box">
+                <div class="case-title">Case Study 2.6: Fetal Oxygen Transfer</div>
+                <p>Fetal hemoglobin (HbF) has a higher affinity for oxygen than adult hemoglobin (HbA). This physiological difference is primarily due to HbF's reduced binding to which molecule?</p>
+                <div class="case-options">
+                    <p><strong>Question:</strong> Which molecule does HbF bind less efficiently?</p>
+                    <ul>
+                        <li><label><input type="radio" name="q2_6" value="A"> A) Lactate</label></li>
+                        <li><label><input type="radio" name="q2_6" value="B"> B) Carbon dioxide</label></li>
+                        <li><label><input type="radio" name="q2_6" value="C"> C) 2,3-Bisphosphoglycerate</label></li>
+                        <li><label><input type="radio" name="q2_6" value="D"> D) ATP</label></li>
+                    </ul>
+                </div>
+                <div class="feedback" id="feedback2_6"></div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Energy Balance Section -->
+        <div class="section">
+            <h2>⚖️ Energy Balance: Over & Under Nutrition</h2>
+            <p>Energy balance is governed by a simple, fundamental principle: **Energy In = Energy Out**. Any imbalance in this equation directly leads to changes in body weight and composition.</p>
+            <ul>
+                <li>If **Energy In > Energy Out**: Leads to **weight gain** (e.g., during healthy growth, or pathologically in **obesity**).</li>
+                <li>If **Energy In < Energy Out**: Leads to **weight loss** (e.g., slimming during dieting, or pathologically in severe **starvation**).</li>
+            </ul>
+            <div class="image-placeholder">
+                <!-- Insert Image: Energy Balance Over & Under Nutrition_2025.pdf - Image 2 (Page 2) showing the energy balance equation with weight loss/gain outcomes. -->
+                <p>Energy Homeostasis Equation</p>
+            </div>
+
+            <h3>Basal Metabolic Rate (BMR) & Total Daily Energy Expenditure (TDEE)</h3>
+            <p>**Energy In** is primarily the **food you eat** (caloric intake). **Energy Out** is more complex and constitutes your **Total Daily Energy Expenditure (TDEE)**. TDEE is the sum of three main components:</p>
+            <ol>
+                <li>**Basal Metabolic Rate (BMR):** This is the **largest component** of daily energy use, accounting for 60-75% of TDEE. It represents the **minimum energy required to sustain life in a resting individual** (i.e., if you were to lay in bed all day without digesting food or moving). BMR covers vital functions like breathing, circulation, cell maintenance, and organ function. It accounts for basal metabolism during sleep and the energy for being awake (arousal).</li>
+                <li>**Thermic Effect of Food (TEF):** Also known as diet-induced thermogenesis. This is the energy spent to **digest, absorb, transport, metabolize, and store nutrients** from food. It typically accounts for about **10% of your daily caloric intake**.
+                    <ul>
+                        <li>**Protein has the highest TEF** (20-30% of its caloric content) because it costs significant energy to deaminate amino acids and synthesize urea. This makes protein a less efficient fuel source compared to fats or carbohydrates, and contributes to satiety.</li>
+                        <li>Carbohydrates have a TEF of 5-10%.</li>
+                        <li>Fats have the lowest TEF, typically 0-3%.</li>
+                    </ul>
+                </li>
+                <li>**Physical Activity:** This is the most variable component of TDEE and includes:
+                    <ul>
+                        <li>**Planned Exercise:** Intentional physical activity (e.g., running, lifting weights).</li>
+                        <li>**Non-Exercise Activity Thermogenesis (NEAT):** Energy burned from spontaneous, unstructured movements like fidgeting, pacing, standing, typing, and other daily activities that are not formal exercise.</li>
+                    </ul>
+                </li>
+            </ol>
+            <div class="image-placeholder">
+                <!-- Insert Image: Energy Balance Over & Under Nutrition_2025.pdf - Image 6 (Page 5) showing the components of Daily Energy Usage. -->
+                <p>Components of Total Daily Energy Expenditure (TDEE)</p>
+            </div>
+            <h4>Factors Affecting BMR:</h4>
+            <div class="mnemonic">
+                <strong>Mnemonic for BMR Factors: "G-A-S-H-T" (think of burning GAS to power the body, or simply a list of influences)</strong>
+                <ul>
+                    <li><strong>G</strong>enetics: Individual variations in metabolic efficiency, sympathetic tone, and cellular enzyme isoforms.</li>
+                    <li><strong>A</strong>ge: BMR is high in growing children and adolescents, but gradually **declines with age**, typically by about 2% per decade after age 25, and significantly more after 70-80, primarily due to loss of lean muscle mass.</li>
+                    <li><strong>S</strong>ex (Gender): Males generally have a **higher BMR than females**, largely due to a higher average lean muscle mass.</li>
+                    <li><strong>H</strong>ormones: **Thyroid hormone** is a major regulator of metabolic rate; hyperthyroidism increases BMR, hypothyroidism decreases it. Other hormones like epinephrine also transiently affect BMR.</li>
+                    <li><strong>T</strong>emperature: Body temperature influences BMR. For example, **fever increases BMR** as the body expends more energy to maintain or reduce core temperature. Environmental temperature extremes also require energy expenditure for thermoregulation.</li>
+                    <li><strong>Body Size & Composition:</strong> Larger body size and a greater proportion of **lean muscle mass** increase BMR, as muscle tissue is more metabolically active than fat tissue at rest.</li>
+                </ul>
+            </div>
+
+            <h3>Caloric Content of Food</h3>
+            <p>The energy in our food comes from three primary macronutrients, each with a different caloric density:</p>
+            <ul>
+                <li>**Carbohydrates:** Provide **4 calories per gram**. They are a readily available and rapidly burning energy source, broken down into simple sugars (e.g., glucose) for immediate use or glycogen storage.</li>
+                <li>**Proteins:** Provide **4 calories per gram**. While they can be used for energy, they are a less efficient fuel source compared to fats or carbohydrates due to the energy costs associated with their digestion and deamination (removal of nitrogen) before entering the carbon cycle for oxidation. Their primary role is structural and functional (e.g., enzymes, hormones).</li>
+                <li>**Fats (Lipids):** Provide the most energy dense source at **9 calories per gram**. They are the most efficient form of energy storage in the body.</li>
+            </ul>
+            <p>The body's energy balance is remarkably precise. For example, a chronic **1% error** (just 20 kcal/day) in a 2000 kcal/day diet, if sustained over 70 years, could theoretically result in a **125 lb weight gain**. This highlights the extraordinary tightness of our body's regulation of energy balance to maintain a stable weight, though many other factors contribute to actual weight change over a lifetime.</p>
+
+            <h3>Body Mass Index (BMI)</h3>
+            <p>The **Body Mass Index (BMI)** is a simple, widely used screening tool to categorize weight status in adults, based on height and weight. It was originally developed by insurance companies as a quick assessment of population health. If the formula below doesn't render, it means BMI = (weight in kg) / (height in meters squared).</p>
+            $$BMI = \frac{\text{weight in } kg}{(\text{height in } m)^2}$$
+            <p>BMI Categories (as defined by the WHO):</p>
+            <ul>
+                <li>**&lt; 18.5**: **Underweight**</li>
+                <li>**18.5 - 24.9**: **Normal weight**</li>
+                <li>**25 - 29.9**: **Overweight**</li>
+                <li>**30 - 39.9**: **Obese** (often subdivided into Class I: 30-34.9, Class II: 35-39.9)</li>
+                <li>**&gt; 40**: **Morbidly Obese** (or Class III Obesity)</li>
+            </ul>
+            <p>**Important Note:** While useful as a general screening tool, BMI does **not distinguish between fat mass and lean muscle mass**. Therefore, a very muscular person (e.g., a professional bodybuilder) could have a BMI in the "obese" range without actually being overfat or having an increased health risk associated with excess adipose tissue. Conversely, an individual with low muscle mass might have a "normal" BMI but still carry excessive body fat ("skinny fat"). For a more accurate assessment of body fat, other measures like waist circumference, skinfold thickness, or body fat percentage are often used in conjunction with BMI.</p>
+
+            <h3>Obesity vs. Starvation: Broad Energetic States</h3>
+            <ul>
+                <li>**Obesity:** The most rapidly growing medical condition in Western society, presenting a significant public health challenge. It's primarily caused by a sustained **positive energy balance** resulting from a lifestyle of chronic **excess calorie intake** and insufficient physical activity. However, severe obesity (BMI > 30) often has complex genetic components.
+                    <ul>
+                        <li>**Leptin Resistance:** The hormone **leptin**, produced by adipose tissue, normally signals satiety and increases energy expenditure. While genetic deficiencies in leptin (or its receptor) can cause rare forms of severe obesity, most obese humans are **not leptin-deficient**. Instead, they exhibit **leptin resistance**, meaning their bodies produce high levels of leptin, but the brain and other tissues no longer respond adequately to its satiety signals, perpetuating overeating and weight gain.</li>
+                    </ul>
+                </li>
+                <li>**Starvation:** A severe and pathological state of **negative energy balance** resulting from prolonged lack of adequate food intake. The body undergoes distinct metabolic adaptations to preserve vital functions.
+                    <ol>
+                        <li>**Phase 1: Prolonged Fasting (hours to ~1 day):** The body's immediate focus is to **spare glucose for the brain** and other obligate glucose users. The liver rapidly breaks down its **glycogen stores** (glycogenolysis). Once liver glycogen is depleted (typically within 12-24 hours), the liver begins making glucose from non-carbohydrate precursors via **gluconeogenesis**, primarily utilizing amino acids (from muscle protein breakdown) and glycerol (from fat breakdown). Muscle tissue shifts to relying more on fat as an energy source to spare glucose.</li>
+                        <li>**Phase 2: Extended Deprivation (days to weeks):** As fasting continues and glycogen stores are completely depleted, **fat reserves** become the primary energy source. The liver significantly increases its production of **ketone bodies** (acetoacetate and beta-hydroxybutyrate) from fatty acid oxidation. Ketones become an **alternative fuel source that the brain can utilize** (up to 70% of its energy), significantly sparing glucose and reducing the need for protein breakdown for gluconeogenesis. Non-essential proteins in plasma are still used for gluconeogenesis, and the kidney's capacity for gluconeogenesis also increases.</li>
+                        <li>**Phase 3: Frank Starvation (weeks to months):** Once fat reserves are severely depleted, the body's only remaining significant fuel source is **protein**. **Muscle breakdown accelerates rapidly**, as muscle tissue is catabolized to provide amino acids for gluconeogenesis. The loss of essential cellular proteins leads to the degradation of proteins vital for cellular and tissue function, notably compromising the **immune system**. The **most common cause of death from frank starvation is not the direct lack of energy, but a high susceptibility to severe infections** due to immune system collapse.</li>
+                    </ol>
+                </li>
+            </ul>
+
+            <div class="question-box">
+                <div class="case-title">Case Study 3.1: Weight Management Counseling</div>
+                <p>A 45-year-old sedentary male is seeking advice on weight loss. He hears about diets emphasizing the "thermic effect of food." Which macronutrient should his diet prioritize to maximize this effect?</p>
+                <div class="case-options">
+                    <p><strong>Question:</strong> Which macronutrient maximizes TEF?</p>
+                    <ul>
+                        <li><label><input type="radio" name="q3_1" value="A"> A) Carbohydrates, due to rapid digestion.</label></li>
+                        <li><label><input type="radio" name="q3_1" value="B"> B) Fats, due to high caloric density.</label></li>
+                        <li><label><input type="radio" name="q3_1" value="C"> C) Proteins, due to the energy cost of deamination and urea synthesis.</label></li>
+                        <li><label><input type="radio" name="q3_1" value="D"> D) All macronutrients have the same thermic effect.</label></li>
+                    </ul>
+                </div>
+                <div class="feedback" id="feedback3_1"></div>
+            </div>
+
+            <div class="question-box">
+                <div class="case-title">Case Study 3.2: Teenage Growth Spurt</div>
+                <p>A healthy 15-year-old male is undergoing a rapid growth spurt. Compared to a 60-year-old sedentary male, the teenager's basal metabolic rate (BMR) is most likely to be higher primarily due to which factor(s)?</p>
+                <div class="case-options">
+                    <p><strong>Question:</strong> What explains the teenager's higher BMR?</p>
+                    <ul>
+                        <li><label><input type="radio" name="q3_2" value="A"> A) Lower body mass and reduced physical activity.</label></li>
+                        <li><label><input type="radio" name="q3_2" value="B"> B) Increased thermic effect of food.</label></li>
+                        <li><label><input type="radio" name="q3_2" value="C"> C) Higher age and lower lean body mass.</label></li>
+                        <li><label><input type="radio" name="q3_2" value="D"> D) Higher lean body mass and younger age.</label></li>
+                    </ul>
+                </div>
+                <div class="feedback" id="feedback3_2"></div>
+            </div>
+
+            <div class="question-box">
+                <div class="case-title">Case Study 3.3: Starvation Adaptation</div>
+                <p>During extended periods of food deprivation (several days), the brain begins to utilize an alternative fuel source to spare glucose. What is this primary alternative fuel?</p>
+                <div class="case-options">
+                    <p><strong>Question:</strong> What alternative fuel does the brain use during extended deprivation?</p>
+                    <ul>
+                        <li><label><input type="radio" name="q3_3" value="A"> A) Fatty acids</label></li>
+                        <li><label><input type="q3_3" name="radio" value="B"> B) Amino acids</label></li>
+                        <li><label><input type="radio" name="q3_3" value="C"> C) Ketone bodies</label></li>
+                        <li><label><input type="radio" name="q3_3" value="D"> D) Glycogen from muscle</label></li>
+                    </ul>
+                </div>
+                <div class="feedback" id="feedback3_3"></div>
+            </div>
+
+            <div class="question-box">
+                <div class="case-title">Case Study 3.4: Obesity Paradox</div>
+                <p>A professional bodybuilder has a BMI of 32 kg/m². According to the standard BMI categorization, this individual is classified as "obese." However, they have very low body fat and significant muscle mass. This scenario highlights which limitation of BMI as a health indicator?</p>
+                <div class="case-options">
+                    <p><strong>Question:</strong> What limitation of BMI does this scenario demonstrate?</p>
+                    <ul>
+                        <li><label><input type="radio" name="q3_4" value="A"> A) BMI does not account for age.</label></li>
+                        <li><label><input type="radio" name="q3_4" value="B"> B) BMI does not differentiate between fat mass and lean muscle mass.</label></li>
+                        <li><label><input type="radio" name="q3_4" value="C"> C) BMI is only accurate for individuals with sedentary lifestyles.</label></li>
+                        <li><label><input type="radio" name="q3_4" value="D"> D) BMI calculations are often inaccurate.</label></li>
+                    </ul>
+                </div>
+                <div class="feedback" id="feedback3_4"></div>
+            </div>
+
+            <div class="question-box">
+                <div class="case-title">Case Study 3.5: Leptin Resistance</div>
+                <p>Most obese individuals have high circulating levels of leptin but continue to gain weight. This phenomenon is best explained by which of the following?</p>
+                <div class="case-options">
+                    <p><strong>Question:</strong> What explains this observation in most obese individuals?</p>
+                    <ul>
+                        <li><label><input type="radio" name="q3_5" value="A"> A) A genetic deficiency in leptin production.</label></li>
+                        <li><label><input type="radio" name="q3_5" value="B"> B) Increased sensitivity to leptin's anorexic signals.</label></li>
+                        <li><label><input type="radio" name="q3_5" value="C"> C) Development of leptin resistance, where the body no longer responds to its satiety signals.</label></li>
+                        <li><label><input type="radio" name="q3_5" value="D"> D) Accelerated energy expenditure despite high leptin levels.</label></li>
+                    </ul>
+                </div>
+                <div class="feedback" id="feedback3_5"></div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Interpreting Blood Labs Section -->
+        <div class="section">
+            <h2>🔬 Interpreting Blood Labs: The Complete Blood Count (CBC)</h2>
+            <p>The **Complete Blood Count (CBC)** is a fundamental and frequently ordered blood test that quantifies the main cellular components of blood. It provides crucial insights into overall health, infection, inflammation, anemia, bleeding disorders, and various other medical conditions.</p>
+
+            <h3>Blood Composition</h3>
+            <p>When a tube of anticoagulated whole blood is centrifuged, it separates into three distinct layers based on density:</p>
+            <ol>
+                <li>**Plasma (top layer, ~55% of total blood volume):** This is the liquid matrix of blood. It's composed mostly of water (91.5%), with dissolved proteins (7%, e.g., albumin, globulins, clotting factors like fibrinogen), and other solutes (1.5%, e.g., electrolytes, nutrients, hormones, vitamins, waste products).</li>
+                <li>**Buffy Coat (thin middle layer, &lt;1% of total blood volume):** This is a thin, whitish layer situated between the plasma and red blood cells. It contains all the **white blood cells (WBCs)** and **platelets**.</li>
+                <li>**Packed Red Blood Cells (bottom layer, ~45% of total blood volume):** This dense, reddish layer consists primarily of red blood cells. The volume percentage of red blood cells in total blood is known as the **hematocrit (Hct)**.</li>
+            </ol>
+            <div class="image-placeholder">
+                <!-- Insert Image: Interpreting Blood Labs_CBC.pdf - Image 2 (Page 3) showing the centrifuged blood tube and its components. -->
+                <p>Composition of Blood After Centrifugation</p>
+            </div>
+            
+            <h3>CBC Parameters: A Quick Guide</h3>
+            <p>A standard CBC report includes measurements and indices for red blood cells, white blood cells, and platelets:</p>
+            <ul>
+                <li>**WBC (White Blood Cell Count):** Measures the total number of white blood cells (leukocytes) per microliter of blood.
+                    <ul>
+                        <li>**Normal Range:** 4,500 - 11,000 /µL (varies slightly by lab).</li>
+                        <li>**Leukocytosis:** An elevated WBC count (&gt;11,000/µL), often indicating infection (bacterial, viral), inflammation, stress, or certain leukemias.</li>
+                        <li>**Leukopenia:** A decreased WBC count (&lt;4,500/µL), which can be due to bone marrow suppression (e.g., chemotherapy, radiation), severe infections (e.g., sepsis), autoimmune diseases (e.g., lupus), or certain viral infections.</li>
+                        <li>**WBC Differential:** This part of the CBC breaks down the total WBC count into the percentage and absolute number of each of the five main types of leukocytes. Understanding the differential is critical for diagnosis.
+                            <div class="image-placeholder">
+                                <!-- Insert Image: Interpreting Blood Labs_CBC.pdf - Image 4 (Page 5) showing the different types of WBCs (Neutrophil, Lymphocyte, Monocyte, Eosinophil, Basophil). -->
+                                <p>Types of White Blood Cells (WBC Differential)</p>
+                            </div>
+                            <ul>
+                                <li>**Neutrophils:** Most abundant (40-75%). Phagocytic, crucial for fighting bacterial infections. An increase is called **neutrophilia**; a decrease is **neutropenia**.</li>
+                                <li>**Lymphocytes:** (25-40%). Key players in adaptive immunity (T cells, B cells). An increase is **lymphocytosis** (common in viral infections); a decrease is **lymphopenia**.</li>
+                                <li>**Monocytes:** (2-14%). Phagocytic cells that differentiate into macrophages in tissues.</li>
+                                <li>**Eosinophils:** (0-6%). Involved in allergic reactions and parasitic infections. An increase is **eosinophilia**.</li>
+                                <li>**Basophils:** (0-2%). Release histamine, involved in allergic responses.</li>
+                                <li>**"Left Shift":** Refers to an increase in immature neutrophils (e.g., **bands** (stab cells), metamyelocytes, myelocytes) in the peripheral blood. This indicates that the bone marrow is rapidly producing and releasing neutrophils in response to a strong stimulus, most commonly a severe bacterial infection or significant inflammation.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>**RBC (Red Blood Cell Count):** Total number of red blood cells per microliter.
+                    <ul>
+                        <li>**Normal Ranges:** Male: 4.3-5.9 million/µL; Female: 3.5-5.5 million/µL.</li>
+                    </ul>
+                </li>
+                <li>**Hgb (Hemoglobin) & Hct (Hematocrit):** These are the most common indicators of anemia.
+                    <ul>
+                        <li>**Hemoglobin (Hgb):** Measures the amount of oxygen-carrying protein in the blood.
+                            <ul>
+                                <li>**Normal Ranges:** Male: 14.0-18.0 g/dL; Female: 12.0-16.0 g/dL.</li>
+                            </ul>
+                        </li>
+                        <li>**Hematocrit (Hct):** Measures the percentage of red blood cells in the total blood volume (as seen in the packed RBC layer).
+                            <ul>
+                                <li>**Normal Ranges:** Male: 40-54%; Female: 37-47%.</li>
+                            </ul>
+                        </li>
+                        <li>**Anemia:** Low levels of Hgb or Hct indicate anemia, a condition characterized by a reduced ability of the blood to carry oxygen.</li>
+                    </ul>
+                </li>
+                <li>**RBC Indices:** These are calculated values that provide information about the average size and hemoglobin content of individual red blood cells, which are crucial for classifying different types of anemia.
+                    <ul>
+                        <li>**MCV (Mean Corpuscular Volume):** Measures the **average size of RBCs**.
+                            <ul>
+                                <li>**Normal Range:** 80-100 fL (femtoliters).</li>
+                                <li>**Microcytic Anemia:** MCV &lt; 80 fL (RBCs are small). Common causes: **Iron Deficiency Anemia** (most common), Thalassemia, Anemia of Chronic Disease, Lead Poisoning.</li>
+                                <li>**Normocytic Anemia:** MCV 80-100 fL (RBCs are normal size). Common causes: Acute Blood Loss, Anemia of Chronic Kidney Disease, Early stages of Iron Deficiency, Aplastic Anemia, Anemia of Chronic Disease.</li>
+                                <li>**Macrocytic Anemia:** MCV &gt; 100 fL (RBCs are large). Common causes: **Folate or Vitamin B12 Deficiency** (megaloblastic anemias), Alcoholism, Liver Disease, Hypothyroidism.</li>
+                            </ul>
+                        </li>
+                        <li>**MCH (Mean Corpuscular Hemoglobin) / MCHC (Mean Corpuscular Hemoglobin Concentration):**
+                            <ul>
+                                <li>**MCH:** Average mass of hemoglobin per RBC.</li>
+                                <li>**MCHC:** Average concentration of hemoglobin in a given volume of packed RBCs.</li>
+                                <li>Used to classify cells by color/hemoglobin content: **Hypochromic** (pale, low MCH/MCHC, e.g., Iron Deficiency Anemia) or **Normochromic** (normal color).</li>
+                            </ul>
+                        </li>
+                        <li>**RDW (Red Cell Distribution Width):** Measures the **variation in RBC size (anisocytosis)**. An elevated RDW indicates a mix of different sized red cells (e.g., very small and normal-sized cells). This is often an early indicator of developing nutritional anemias or mixed anemias, or effective treatment of anemia (release of larger reticulocytes).</li>
+                    </ul>
+                </li>
+                <li>**Platelet Count:** Measures the number of platelets (thrombocytes) per microliter, essential for primary hemostasis (blood clotting).
+                    <ul>
+                        <li>**Normal Range:** 150,000 - 450,000 /µL.</li>
+                        <li>**Thrombocytopenia:** Low platelet count (&lt;150,000/µL), increasing bleeding risk. Causes: bone marrow failure, increased destruction (e.g., ITP), increased consumption (e.g., DIC).</li>
+                        <li>**Thrombocytosis:** High platelet count (&gt;450,000/µL), can be reactive (e.g., in iron deficiency anemia, inflammation, post-splenectomy) or due to myeloproliferative disorders.</li>
+                    </ul>
+                </li>
+                <li>**Reticulocyte Count:** Measures the percentage of young, immature red blood cells newly released from the bone marrow.
+                    <ul>
+                        <li>**Normal Range:** 0.5-2.5% (or 1.5-2% of RBCs).</li>
+                        <li>**Importance:** A high reticulocyte count in an anemic patient suggests that the **bone marrow is responding appropriately** to the anemia by producing more RBCs (e.g., in hemolytic anemia, acute blood loss). It indicates effective bone marrow activity. A low reticulocyte count in an anemic patient suggests impaired bone marrow production (e.g., aplastic anemia, nutritional deficiencies affecting erythropoiesis).</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Peripheral Blood Smear: What to Look For 👀</h3>
+            <p>A manual review of a stained peripheral blood smear under a microscope provides crucial diagnostic information that automated CBC counters cannot. It allows for detailed examination of cell morphology, size, shape, color, inclusions, and arrangement, which are vital for confirming diagnoses or identifying unexpected findings. **(Remember to add your actual PDF images here for better understanding!)**</p>
+            
+            <h4>RBC Shape (Poikilocytosis) & Color Variations:</h4>
+            <p>**Poikilocytosis** is the general term for variations in red blood cell shape. Specific abnormal shapes can be clues to underlying diseases.</p>
+            <div class="mnemonic">
+                <strong>Mnemonic for Common RBC Shapes & Inclusions: "DROP SICKLE TARGET SPHERE" (and others)</strong>
+                <ul>
+                    <li><strong>D</strong>acrocyte (Teardrop cell): Marrow fibrosis</li>
+                    <li><strong>R</strong>ouleaux: High plasma protein (e.g., Myeloma)</li>
+                    <li><strong>O</strong>valocyte/Elliptocyte: Hereditary, Thalassemia</li>
+                    <li><strong>P</strong>appenheimer bodies: Sideroblastic anemia</li>
+                    <li><strong>S</strong>chistocyte: Microangiopathic hemolysis (DIC, TTP, HUS)</li>
+                    <li><strong>S</strong>ickle Cell: Sickle Cell Disease</li>
+                    <li><strong>T</strong>arget Cell: Liver disease, Thalassemia</li>
+                    <li><strong>S</strong>pherocyte: Hereditary spherocytosis, Autoimmune hemolytic anemia</li>
+                    <li><strong>H</strong>owell-Jolly bodies: Asplenia/Hyposplenism</li>
+                    <li>**B**asophilic **S**tippling: Lead poisoning, Thalassemia (think **B**road **S**cattering)</li>
+                    <li>**A**canthocyte: Liver disease, Abetalipoproteinemia</li>
+                    <li>**E**chinocyte (Burr Cell): Uremia, PK deficiency (often artifactual)</li>
+                </ul>
+            </div>
+            <ul>
+                <li>**Sickle Cells:** Distinctive **crescent or "sickle" shaped** red blood cells, characteristic of **sickle cell disease** (due to abnormal hemoglobin S polymerization under deoxygenated conditions).
+                    <div class="image-placeholder">
+                        <!-- Insert Image: Interpreting Blood Labs_CBC.pdf - Image 22 (Page 25) showing sickle cells. -->
+                        <p>Sickle Cells (Sickle Cell Anemia)</p>
+                    </div>
+                </li>
+                <li>**Schistocytes (Fragmented RBCs):** Irregularly shaped, fragmented red blood cells (e.g., helmet cells, triangular cells). A hallmark of **microangiopathic hemolytic anemias** (MAHA) where RBCs are mechanically sheared as they pass through obstructed or abnormal small blood vessels. Conditions include **Disseminated Intravascular Coagulation (DIC), Thrombotic Thrombocytopenic Purpura (TTP), Hemolytic Uremic Syndrome (HUS)**. Their presence suggests severe prognosis and requires urgent investigation of coagulation.
+                    <div class="image-placeholder">
+                        <!-- Insert Image: Interpreting Blood Labs_CBC.pdf - Image 20 (Page 23) showing schistocytes. -->
+                        <p>Schistocytes (RBC Fragments)</p>
+                    </div>
+                </li>
+                <li>**Spherocytes:** Small, dense, perfectly spherical red blood cells that have **lost their central pallor**. They are more rigid and prone to splenic sequestration and destruction. Seen in **hereditary spherocytosis** (a genetic defect in RBC membrane proteins) or **autoimmune hemolytic anemia** (due to antibody coating and partial phagocytosis by splenic macrophages).
+                    <div class="image-placeholder">
+                        <!-- Insert Image: Interpreting Blood Labs_CBC.pdf - Image 21 (Page 24) showing spherocytes. -->
+                        <p>Spherocytes</p>
+                    </div>
+                </li>
+                <li>**Target Cells (Codocytes):** Red blood cells that look like a "bullseye" or target, with a central area of hemoglobin, then a pale ring, then an outer ring of hemoglobin. This appearance is due to increased surface area to volume ratio. Seen in **liver disease** (especially alcoholic liver disease, due to excess cholesterol in the membrane), **thalassemia** (due to unbalanced globin chain synthesis), iron deficiency anemia, and asplenia.
+                    <div class="image-placeholder">
+                        <!-- Insert Image: Interpreting Blood Labs_CBC.pdf - Image 17 (Page 20) showing target cells. -->
+                        <p>Target Cells</p>
+                    </div>
+                </li>
+                <li>**Teardrop Cells (Dacrocytes):** Red blood cells shaped like a teardrop or pear. Their presence strongly suggests **bone marrow fibrosis** (e.g., in myelofibrosis) or other conditions causing the marrow to be distorted, forcing RBCs to "squeeze" out. Can also be seen in severe anemias or extramedullary hematopoiesis.</li>
+                <li>**Acanthocytes (Spur Cells):** Red blood cells with large, irregular, blunt, and unevenly spaced spiny projections. Associated with severe **liver disease** (due to abnormal cholesterol metabolism and accumulation of free cholesterol in the membrane), abetalipoproteinemia, and neuroacanthocytosis.</li>
+                <li>**Echinocytes (Burr Cells):** Red blood cells with smaller, more regular, and evenly spaced spiny projections. Often artifactual (due to prolonged storage, pH changes, or slow drying of smear), but can be genuinely seen in uremia, liver disease, or pyruvate kinase deficiency.</li>
+            </ul>
+            <h4>RBC Inclusions:</h4>
+            <ul>
+                <li>**Howell-Jolly Bodies:** Small, dense, round, purple-blue DNA remnants located within the cytoplasm of red blood cells. These are normally removed by the spleen's pitting function. Their presence strongly suggests **asplenia** (absence of the spleen) or **hyposplenism** (a non-functioning or poorly functioning spleen, e.g., after splenic infarction in sickle cell disease).
+                    <div class="image-placeholder">
+                        <!-- Insert Image: Interpreting Blood Labs_CBC.pdf - Image 24 (Page 27) showing Howell-Jolly bodies. -->
+                        <p>Howell-Jolly Bodies (Indicates Splenic Dysfunction)</p>
+                    </div>
+                </li>
+                <li>**Basophilic Stippling:** Multiple small, fine, blue-purple granular dots (precipitated ribosomal RNA aggregates) distributed throughout the cytoplasm of red blood cells. Most commonly seen in **lead poisoning**, but also in thalassemia, megaloblastic anemia, and myelodysplastic syndromes (MDS).
+                    <div class="image-placeholder">
+                        <!-- Insert Image: Interpreting Blood Labs_CBC.pdf - Image 25 (Page 28) showing basophilic stippling. -->
+                        <p>Basophilic Stippling (e.g., Lead Poisoning)</p>
+                    </div>
+                </li>
+                <li>**Pappenheimer Bodies:** Small, irregular, blue inclusions containing iron (siderotic granules), visible with a Prussian blue stain (iron stain). They are seen in **sideroblastic anemia**, thalassemia, and other severe anemias.</li>
+                <li>**Malaria Parasites:** Various developmental stages of Plasmodium species (e.g., ring forms, trophozoites, schizonts) can be seen within red blood cells, indicating malaria infection.</li>
+                <li>**Babesiosis:** Intracellular parasites (Babesia species) that can be seen within red blood cells, often forming characteristic "Maltese cross" patterns (four rings clustered together).</li>
+            </ul>
+            <h4>RBC Arrangement:</h4>
+            <ul>
+                <li>**Rouleaux Formation:** Red blood cells stacked uniformly like a "stack of coins." This occurs when high levels of abnormal plasma proteins (e.g., immunoglobulins in **multiple myeloma**, macroglobulinemia, or severe infections/inflammatory states) neutralize the normal negative charge on RBC surfaces, causing them to stick together instead of repelling each other.
+                    <div class="image-placeholder">
+                        <!-- Insert Image: Interpreting Blood Labs_CBC.pdf - Image 31 (Page 34) showing rouleaux formation. -->
+                        <p>Rouleaux Formation (e.g., Multiple Myeloma)</p>
+                    </div>
+                </li>
+                <li>**Agglutination:** Irregular, grape-like clumping of red blood cells. This is usually caused by the presence of **IgM antibodies** (cold agglutinins) that bind to RBCs, leading to spontaneous clumping, often observed at colder temperatures. Seen in conditions like **cold agglutinin disease**, Mycoplasma pneumoniae infection, and Epstein-Barr virus (EBV) infection.
+                    <div class="image-placeholder">
+                        <!-- Insert Image: Interpreting Blood Labs_CBC.pdf - Image 32 (Page 35) showing RBC agglutination. -->
+                        <p>RBC Agglutination (e.g., Cold Agglutinin Disease)</p>
+                    </div>
+                </li>
+            </ul>
+            <h4>WBC Abnormalities & Pathology:</h4>
+            <ul>
+                <li>**Toxic Granulation:** Darker, more prominent (coarse, basophilic) primary (azurophilic) granules in the cytoplasm of neutrophils. Often accompanied by cytoplasmic vacuoles and Dohle bodies. Indicates severe bacterial infection, inflammation, or toxin exposure, reflecting intense neutrophil activation.</li>
+                <li>**Dohle Bodies:** Irregular, light blue or grayish inclusions found in the cytoplasm of neutrophils. They are remnants of rough endoplasmic reticulum RNA. Seen in infection, inflammatory conditions, burns, or myelodysplastic syndromes.</li>
+                <li>**Leukemoid Reaction:** An extreme leukocytosis (&gt;30,000-40,000 WBC/µL) with an increase in mature and immature granulocytes (including myelocytes and metamyelocytes) in the peripheral blood, mimicking leukemia. However, it is a reactive, non-neoplastic response to severe infection or inflammation (e.g., C. difficile colitis, severe pneumonia). It is differentiated from Chronic Myeloid Leukemia (CML) by a high Leukocyte Alkaline Phosphatase (LAP) score (LAP is low in CML) and absence of the Philadelphia chromosome.</li>
+                <li>**Leucoerythroblastosis:** The presence of both immature granulocytes (a "left shift") AND nucleated red blood cells (nRBCs) in the peripheral blood. This indicates severe bone marrow stress, bone marrow fibrosis (e.g., myelofibrosis), or infiltration of the bone marrow by malignancy (e.g., metastatic carcinoma, lymphoma), displacing normal hematopoiesis.</li>
+                <li>**Atypical/Reactive Lymphocytes:** Larger lymphocytes with irregular nuclear shapes, abundant basophilic cytoplasm, and often a "scalloped" appearance where their cytoplasm indents around adjacent red blood cells. These are morphologically abnormal but are a reactive, benign response to certain viral infections, most notably **infectious mononucleosis (Epstein-Barr Virus)**, but also Cytomegalovirus (CMV), HIV, and Toxoplasmosis.</li>
+                <li>**Plasma Cells in Peripheral Blood:** Normally absent. Their presence (especially &gt;5%) in peripheral blood is abnormal and may indicate **plasma cell leukemia** or advanced **multiple myeloma**.</li>
+                <li>**Leukemias:** Malignant (neoplastic) conditions characterized by the abnormal proliferation and maturation arrest of white blood cell precursors in the bone marrow, leading to their release into the peripheral blood. Types include Acute Lymphoblastic Leukemia (ALL), Acute Myeloid Leukemia (AML), Chronic Lymphocytic Leukemia (CLL), and Chronic Myeloid Leukemia (CML).</li>
+            </ul>
+
+            <div class="question-box">
+                <div class="case-title">Case Study 4.1: Anemic Patient's Reticulocyte Count</div>
+                <p>A patient with severe anemia (Hemoglobin 7.5 g/dL) is found to have a reticulocyte count of 10%. What does this finding most likely suggest about the patient's bone marrow activity?</p>
+                <div class="case-options">
+                    <p><strong>Question:</strong> What does the reticulocyte count indicate?</p>
+                    <ul>
+                        <li><label><input type="radio" name="q4_1" value="A"> A) The bone marrow is failing to produce red blood cells.</label></li>
+                        <li><label><input type="radio" name="q4_1" value="B"> B) The bone marrow is compensating well for the anemia.</label></li>
+                        <li><label><input type="radio" name="q4_1" value="C"> C) The patient has aplastic anemia.</label></li>
+                        <li><label><input type="radio" name="q4_1" value="D"> D) There is an intrinsic defect in red blood cell production.</label></li>
+                    </ul>
+                </div>
+                <div class="feedback" id="feedback4_1"></div>
+            </div>
+
+            <div class="question-box">
+                <div class="case-title">Case Study 4.2: Peripheral Smear Findings</div>
+                <p>A peripheral blood smear from a patient with disseminated intravascular coagulation (DIC) would most likely show which of the following abnormal red blood cell morphologies?</p>
+                <div class="case-options">
+                    <p><strong>Question:</strong> Which RBC morphology is characteristic of DIC?</p>
+                    <ul>
+                        <li><label><input type="radio" name="q4_2" value="A"> A) Target cells</label></li>
+                        <li><label><input type="radio" name="q4_2" value="B"> B) Spherocytes</label></li>
+                        <li><label><input type="radio" name="q4_2" value="C"> C) Schistocytes</label></li>
+                        <li><label><input type="radio" name="q4_2" value="D"> D) Howell-Jolly bodies</label></li>
+                    </ul>
+                </div>
+                <div class="feedback" id="feedback4_2"></div>
+            </div>
+
+            <div class="question-box">
+                <div class="case-title">Case Study 4.3: Chronic Myeloid Leukemia (CML)</div>
+                <p>A patient presents with a significantly elevated white blood cell count, and the differential shows an increase in mature and immature granulocytes including myelocytes and metamyelocytes, along with basophilia and eosinophilia. FISH analysis reveals a Philadelphia chromosome (t(9;22)). This constellation of findings is most indicative of which condition?</p>
+                <div class="case-options">
+                    <p><strong>Question:</strong> What is the most likely diagnosis?</p>
+                    <ul>
+                        <li><label><input type="radio" name="q4_3" value="A"> A) Leukemoid reaction</label></li>
+                        <li><label><input type="radio" name="q4_3" value="B"> B) Acute Myeloid Leukemia (AML)</label></li>
+                        <li><label><input type="radio" name="q4_3" value="C"> C) Chronic Lymphocytic Leukemia (CLL)</label></li>
+                        <li><label><input type="radio" name="q4_3" value="D"> D) Chronic Myeloid Leukemia (CML)</label></li>
+                    </ul>
+                </div>
+                <div class="feedback" id="feedback4_3"></div>
+            </div>
+
+            <div class="question-box">
+                <div class="case-title">Case Study 4.4: Liver Disease and RBCs</div>
+                <p>A patient with severe alcoholic liver disease has a peripheral blood smear showing numerous red blood cells with a "bullseye" appearance (central area of hemoglobin surrounded by a pale ring, then an outer ring of hemoglobin). This morphology is best described as:</p>
+                <div class="case-options">
+                    <p><strong>Question:</strong> What RBC morphology is described?</p>
+                    <ul>
+                        <li><label><input type="radio" name="q4_4" value="A"> A) Sickle cells</label></li>
+                        <li><label><input type="radio" name="q4_4" value="B"> B) Spherocytes</label></li>
+                        <li><label><input type="radio" name="q4_4" value="C"> C) Acanthocytes</label></li>
+                        <li><label><input type="radio" name="q4_4" value="D"> D) Target cells</label></li>
+                    </ul>
+                </div>
+                <div class="feedback" id="feedback4_4"></div>
+            </div>
+
+            <div class="question-box">
+                <div class="case-title">Case Study 4.5: Red Cell Size Variation</div>
+                <p>A CBC report indicates an elevated RDW (Red Cell Distribution Width). This finding primarily suggests which of the following about the patient's red blood cells?</p>
+                <div class="case-options">
+                    <p><strong>Question:</strong> What does an elevated RDW indicate?</p>
+                    <ul>
+                        <li><label><input type="radio" name="q4_5" value="A"> A) They have a decreased central pallor.</label></li>
+                        <li><label><input type="radio" name="q4_5" value="B"> B) They are abnormally shaped (poikilocytosis).</label></li>
+                        <li><label><input type="radio" name="q4_5" value="C"> C) There is significant variation in their sizes (anisocytosis).</label></li>
+                        <li><label><input type="radio" name="q4_5" value="D"> D) They are immature forms released from the bone marrow.</label></li>
+                    </ul>
+                </div>
+                <div class="feedback" id="feedback4_5"></div>
+            </div>
+
+            <div class="question-box">
+                <div class="case-title">Case Study 4.6: Multiple Myeloma Suspect</div>
+                <p>A 70-year-old patient is suspected of having multiple myeloma. A peripheral blood smear would most likely reveal which characteristic red blood cell arrangement?</p>
+                <div class="case-options">
+                    <p><strong>Question:</strong> Which RBC arrangement is seen in multiple myeloma?</p>
+                    <ul>
+                        <li><label><input type="radio" name="q4_6" value="A"> A) Agglutination</label></li>
+                        <li><label><input type="radio" name="q4_6" value="B"> B) Rouleaux formation</label></li>
+                        <li><label><input type="radio" name="q4_6" value="C"> C) Autoagglutination</label></li>
+                        <li><label><input type="radio" name="q4_6" value="D"> D) Increased central pallor</label></li>
+                    </ul>
+                </div>
+                <div class="feedback" id="feedback4_6"></div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Epithelial Tissue Section -->
+        <div class="section">
+            <h2>🧱 Introduction to Epithelial Tissue</h2>
+            <p>Our body is composed of four basic tissue types: **epithelial, connective, muscle, and nervous tissue**. Most organs contain a mix of these types. Epithelial tissue is unique and acts as the body's great organizer and protector, forming linings, coverings, and glands throughout the body.</p>
+
+            <h3>General Properties of Epithelia</h3>
+            <ul>
+                <li>**It Covers Everything:** Epithelia line **all body surfaces**, both external (e.g., epidermis of the skin) and internal (e.g., the lining of the gut, blood vessels, respiratory tract, and all body cavities). They form the interface between different environments.</li>
+                <li>**It's a Continuous Barrier:** Epithelial tissue's primary role is to act as a **protective barrier** between us and the outside world, or between different internal compartments. This barrier function prevents pathogens, toxins, and unwanted debris from entering underlying tissues.</li>
+                <li>**It's Highly Cellular & Avascular:** Epithelial cells are **packed very tightly together** with very little extracellular space. They are strongly held together by specialized **junctional complexes**. Crucially, epithelia contain **no blood vessels (avascular)**; they receive nutrients by diffusion from the underlying connective tissue, which is richly vascularized.</li>
+                <li>**It's Polarized:** Epithelial cells exhibit a distinct **polarity**, meaning they have structurally and functionally different surfaces. This is vital for their specialized functions.
+                    <ul>
+                        <li>The **apical surface** (or free surface) faces the lumen of an organ or the external environment. This surface often has specialized modifications like microvilli or cilia, and is where absorption, secretion, or protection primarily occur.</li>
+                        <li>The **basal surface** rests on a specialized layer of extracellular matrix called the **basal lamina** (or basement membrane). This surface is involved in attachment to underlying connective tissue, cell signaling, and communication.</li>
+                        <li>The **lateral surfaces** are where epithelial cells connect to each other.</li>
+                    </ul>
+                </li>
+                <li>**Innervated:** Epithelial tissues are typically well-innervated, meaning they have a nerve supply, allowing for sensory reception (e.g., in the skin) and regulation of glandular secretions.</li>
+                <li>**High Regenerative Capacity:** Epithelial tissues have a high capacity for regeneration and repair, constantly replacing damaged or worn-out cells. This is achieved through the mitotic activity of stem cells, typically located in the basal layer (e.g., the gut lining regenerates every few days, skin epidermis every month).</li>
+            </ul>
+
+            <h3>Classification of Epithelia</h3>
+            <p>Epithelia are primarily classified based on two main features that reflect their function:</p>
+            <h4>1. Number of Cell Layers:</h4>
+            <ul>
+                <li>**Simple Epithelium:** Consists of a **single layer of cells**. This type is ideal for locations where rapid diffusion, absorption, or secretion are required, as it forms a very thin barrier (e.g., lining of capillaries, lung alveoli, kidney tubules).</li>
+                <li>**Stratified Epithelium:** Consists of **more than one layer of cells**. This type is adapted for providing robust **protection** in areas subject to abrasion and mechanical stress (e.g., skin, oral cavity, esophagus, vagina). Only the most basal layer is in contact with the basal lamina.</li>
+                <li>**Pseudostratified Epithelium:** <div class="image-placeholder">
+                        <!-- Insert Image: Introduction to Epithelial Tissue.pdf - Image 36 (Page 19) showing Pseudostratified Ciliated Columnar Epithelium. -->
+                        <p>Pseudostratified Ciliated Columnar Epithelium</p>
+                    </div>
+                    Literally meaning "false stratified." It appears to have multiple layers because the nuclei are located at different levels, but in reality, **all cells touch the basal lamina**, even if not all reach the apical surface. This type is characteristic of the **respiratory tract**, where it's typically **ciliated** and contains **goblet cells**.
+                </li>
+            </ul>
+            <h4>2. Shape of the Cells (in the most apical layer for stratified epithelia):</h4>
+            <ul>
+                <li>**Squamous Cells:** Flat, thin, and scale-like cells with flattened, disk-shaped nuclei. Their thinness makes them ideal for rapid diffusion and filtration (e.g., lining of blood vessels, lung alveoli, mesothelium of serous membranes).</li>
+                <li>**Cuboidal Cells:** Cube-shaped cells (approximately as tall as they are wide) with round, centrally located nuclei. Common in ducts and tubules, with active functions in secretion and absorption (e.g., kidney tubules, secretory ducts of glands like thyroid, salivary glands).</li>
+                <li>**Columnar Cells:** Taller than they are wide, with elongated nuclei usually located near the base of the cell. These cells have more cytoplasmic volume to accommodate organelles involved in complex functions like high-volume absorption and secretion (e.g., lining of the small intestine, stomach). They are often associated with apical specializations.</li>
+            </ul>
+            <p>**Putting it Together (Common Examples by Type):**</p>
+            <div class="image-placeholder">
+                <!-- Insert Image: Introduction to Epithelial Tissue.pdf - Image 30 (Page 16) showing various epithelial types (simple squamous, cuboidal, columnar, stratified squamous, pseudostratified). -->
+                <p>Classification of Epithelial Tissues</p>
+            </div>
+            <ul>
+                <li>**Simple Squamous Epithelium:** Found in places where rapid diffusion or filtration is needed.
+                    <ul>
+                        <li>Lines blood vessels and lymphatic vessels (**endothelium**).</li>
+                        <li>Lines body cavities and covers organs (**mesothelium**).</li>
+                        <li>Forms the walls of lung alveoli and parts of the kidney glomeruli.</li>
+                    </ul>
+                </li>
+                <li>**Simple Cuboidal Epithelium:**
+                    <ul>
+                        <li>Found in kidney tubules, ducts of many glands (e.g., thyroid gland follicles), and the surface of ovaries. Involved in secretion and absorption.</li>
+                    </ul>
+                </li>
+                <li>**Simple Columnar Epithelium:**
+                    <ul>
+                        <li>Lines the gastrointestinal tract (from stomach to rectum), gallbladder. Specialized for absorption (often with microvilli) and secretion (often with mucus-producing **goblet cells**).</li>
+                    </ul>
+                </li>
+                <li>**Pseudostratified Ciliated Columnar Epithelium with Goblet Cells:**
+                    <ul>
+                        <li>The classic example is the lining of the **respiratory tract** (trachea, larger bronchi). The cilia rhythmically beat to move mucus (produced by goblet cells) and trapped debris up and out of the airways (mucociliary escalator).</li>
+                    </ul>
+                </li>
+                <li>**Stratified Squamous Epithelium:** Provides protection from abrasion and mechanical stress.
+                    <ul>
+                        <li>**Keratinized Stratified Squamous:** The surface cells are dead, flattened, and filled with the tough, waterproof protein **keratin**. This provides a robust protective barrier against desiccation and abrasion (e.g., the **epidermis of the skin**, palms, soles of feet). Repeated stress can lead to callus formation.</li>
+                        <li>**Non-keratinized Stratified Squamous:** The surface cells are living and retain their nuclei. Found in moist lining surfaces subject to abrasion (e.g., lining of the esophagus, oral cavity, vagina, anal canal).</li>
+                    </ul>
+                </li>
+                <li>**Transitional Epithelium (Urothelium):** <div class="image-placeholder">
+                        <!-- Insert Image: Introduction to Epithelial Tissue.pdf - Image 40 (Page 25) showing Transitional Epithelium. -->
+                        <p>Transitional Epithelium (Urothelium)</p>
+                    </div>
+                    A unique stratified type found exclusively in the **urinary system** (renal pelvis, ureters, urinary bladder, proximal urethra). It has the remarkable ability to stretch and distend significantly without tearing as the bladder fills. Its superficial cells (called **dome cells** or umbrella cells) are often binucleated and protect underlying tissues from the toxicity of urine.
+                </li>
+            </ul>
+
+            <h3>Surface Specializations</h3>
+            <p>These are highly specialized modifications of the apical (free) surface of epithelial cells that enhance specific functions:</p>
+            <ul>
+                <li>**Microvilli:** <div class="image-placeholder">
+                        <!-- Insert Image: Introduction to Epithelial Tissue.pdf - Image 41 (Page 26) showing Microvilli. -->
+                        <p>Microvilli (Increase Surface Area for Absorption)</p>
+                    </div>
+                    Short, finger-like (or brush-like) extensions of the apical plasma membrane. They are primarily designed to **greatly increase the surface area for absorption** (e.g., on the simple columnar cells lining the small intestine, and in kidney tubule cells). They contain a core of **actin filaments** that anchor them to the terminal web in the cytoplasm. Under a light microscope, they often appear as a "brush border."</li>
+                <li>**Cilia:** <div class="image-placeholder">
+                        <!-- Insert Image: Introduction to Epithelial Tissue.pdf - Image 37 (Page 21) showing Cilia. -->
+                        <p>Cilia (Motile Structures for Movement)</p>
+                    </div>
+                    Longer, hair-like, and **motile** structures extending from the apical surface. They are designed for **movement**. They contain an organized core of **microtubules** (typically in a "9+2" axonemal arrangement) and originate from basal bodies. Cilia are responsible for moving substances along epithelial surfaces (e.g., moving mucus and trapped particles along the respiratory tract, moving eggs in the fallopian tubes). Defects in cilia can lead to conditions like primary ciliary dyskinesia (PCD), resulting in chronic respiratory infections and infertility.</li>
+                <li>**Stereocilia:** <div class="image-placeholder">
+                        <!-- Insert Image: Introduction to Epithelial Tissue.pdf - Image 39 (Page 22) showing Stereocilia. -->
+                        <p>Stereocilia (Long, Non-Motile Microvilli)</p>
+                    </div>
+                    Despite their name, these are actually very long, branched, and **non-motile microvilli** (actin-based), not true cilia. They lack the microtubule arrangement of true cilia.
+                    <ul>
+                        <li>Found in the **epididymis** (for absorption and secretion, and increasing surface area for sperm maturation).</li>
+                        <li>Found in the **inner ear** (as sensory mechanoreceptors on hair cells, important for hearing and balance).</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Cell Junctions: Holding It All Together</h3>
+            <p>Cell junctions are specialized protein complexes that provide crucial functions in epithelial tissues: they establish the tissue's **barrier function**, maintain **cell polarity**, and provide **mechanical strength** by physically linking cells to each other and to the basal lamina. The **junctional complex** is a specific set of junctions typically found in a precise order near the apical surface of many epithelia.</p>
+            <div class="mnemonic">
+                <strong>Mnemonic for Junctional Complex (Apical to Basal): "TAD"</strong>
+                <ul>
+                    <li><strong>T</strong>ight Junctions (Zonula Occludens)</li>
+                    <li><strong>A</strong>dherens Junctions (Zonula Adherens)</li>
+                    <li><strong>D</strong>esmosomes (Macula Adherens)</li>
+                </ul>
+            </div>
+            <ul>
+                <li>**Tight Junctions (Zonula Occludens):** These are the **most apical** junctions and form a continuous, "zip-lock" seal around the entire circumference of the cell, fusing adjacent plasma membranes.
+                    <ul>
+                        <li>**Function:** They primarily create a **selective permeability barrier**, preventing molecules from leaking between cells via the **paracellular pathway**. They also play a critical role in **maintaining cell polarity** by preventing integral membrane proteins from diffusing between the apical and basolateral domains.</li>
+                        <li>**Key Proteins:** Mediated by transmembrane proteins like **Claudins** and **Occludins**, which directly interact across the intercellular space.</li>
+                    </ul>
+                </li>
+                <li>**Adherens Junctions (Zonula Adherens):** These are anchoring junctions located just basal to the tight junctions. They form a continuous belt-like structure around the cell.
+                    <ul>
+                        <li>**Function:** They link the **actin cytoskeletons** of adjacent cells, contributing to the structural cohesion of the epithelial sheet and allowing for coordinated shape changes (e.g., during tissue invagination).</li>
+                        <li>**Key Proteins:** Transmembrane proteins called **cadherins** (e.g., **E-cadherin**) mediate cell-cell adhesion. Intracellularly, cadherins are linked to adaptor proteins (e.g., alpha-catenin, beta-catenin) that connect to the actin filament network. beta-catenin also has important signaling roles.</li>
+                    </ul>
+                </li>
+                <li>**Desmosomes (Macula Adherens):** These are strong, localized "spot welds" or button-like junctions scattered along the lateral surfaces of cells.
+                    <ul>
+                        <li>**Function:** They provide immense **tensile strength** and resistance to shearing forces by linking the **intermediate filaments** (e.g., **keratin** filaments in most epithelia, desmin in muscle, GFAP in astrocytes) of adjacent cells.</li>
+                        <li>**Key Proteins:** Mediated by cadherin-like transmembrane proteins called **Desmoglein** and **Desmocollin**, which bind to intracellular protein plaques (desmoplakin, plakoglobin) that anchor the intermediate filaments.</li>
+                        <li>**Clinical Significance:** Autoantibodies against desmosomal proteins (particularly Desmoglein 1 and 3) cause the autoimmune blistering disease **Pemphigus** (characterized by fragile, intraepidermal blisters, meaning the cell-cell adhesion *within* the epithelial layer is compromised).</li>
+                    </ul>
+                </li>
+                <li>**Hemidesmosomes:** These are "half-desmosomes" found on the **basal surface** of epithelial cells.
+                    <ul>
+                        <li>**Function:** They securely anchor the **intermediate filaments** of the epithelial cell to the components of the **basal lamina** (e.g., laminin, type IV collagen), effectively connecting the epithelium to the underlying connective tissue.</li>
+                        <li>**Key Proteins:** Mediated by transmembrane proteins called **integrins** (e.g., alpha6beta4 integrin), which link the intracellular intermediate filaments to extracellular matrix proteins in the basal lamina.</li>
+                        <li>**Clinical Significance:** Autoantibodies against hemidesmosomal proteins cause the autoimmune blistering disease **Pemphigoid** (characterized by tense, subepidermal blisters, meaning the separation occurs *between* the epithelial layer and the underlying basal lamina).</li>
+                    </ul>
+                </li>
+                <li>**Gap Junctions:** These are intercellular communication channels that allow for the direct passage of small molecules and ions between adjacent cells.
+                    <ul>
+                        <li>**Function:** They permit rapid **chemical and electrical coupling** between cells, coordinating their activity (e.g., synchronous contraction in cardiac muscle, coordinated ciliary beat in epithelia, nutrient exchange in avascular tissues).</li>
+                        <li>**Key Proteins:** Formed by hexagonal arrays of protein subunits called **connexons** (each composed of six connexins) that span both plasma membranes and the intercellular space. They are NOT involved in mechanical adhesion.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Glands: Specialized Secretory Epithelia</h3>
+            <p>Glands are formed when epithelial cells proliferate and grow down into the underlying connective tissue, becoming specialized for the synthesis and secretion of specific substances.</p>
+            <ul>
+                <li>**Exocrine Glands:** Secrete their products into **ducts** that lead to a surface (either external, like the skin, or internal, like the lumen of the gastrointestinal tract). Examples include sweat glands, salivary glands, pancreatic acinar cells (digestive enzymes), and sebaceous glands.</li>
+                <li>**Endocrine Glands:** Are **ductless** glands. They secrete their products (**hormones**) directly into the **bloodstream** to act on distant target cells throughout the body. Examples include the thyroid gland, adrenal gland, pituitary gland, and islets of Langerhans in the pancreas.</li>
+            </ul>
+            <h4>Modes of Secretion (for exocrine glands):</h4>
+            <div class="mnemonic">
+                <strong>Mnemonic for Modes of Exocrine Secretion: "H-A-M" (like a HAM sandwich)</strong>
+                <ul>
+                    <li><strong>H</strong>olocrine: The **H**ole cell ruptures (and dies) to release contents.</li>
+                    <li><strong>A</strong>pocrine: The **A**pical part of the cell pinches off.</li>
+                    <li><strong>M</strong>erocrine: The **M**ost common type; cell **M**erely secretes by exocytosis (cell remains intact).</li>
+                </ul>
+            </div>
+            <ol>
+                <li>**Merocrine (Eccrine) Secretion:** This is the **most common** mode of secretion. Secretion occurs via **exocytosis**, where membrane-bound secretory vesicles fuse with the apical plasma membrane to release their contents into the lumen or onto the surface. The secretory cell remains intact and viable after secretion.
+                    <ul>
+                        <li>**Examples:** Most sweat glands (eccrine sweat glands), salivary glands, pancreatic acinar cells, goblet cells (mucus secretion).</li>
+                    </ul>
+                </li>
+                <li>**Apocrine Secretion:** The **apical portion of the secretory cell's cytoplasm pinches off** and is released along with the secretory product. The cell loses part of its cytoplasm but remains viable and repairs itself. These secretions are often lipid-rich.
+                    <ul>
+                        <li>**Examples:** Lactating **mammary glands** (milk fats), and certain sweat glands found in the armpits (axilla) and anogenital regions (apocrine sweat glands). The secretions from apocrine sweat glands are initially odorless but become odorous when metabolized by skin bacteria.</li>
+                    </ul>
+                </li>
+                <li>**Holocrine Secretion:** The most dramatic mode of secretion. The secretory cell accumulates its product in the cytoplasm, then undergoes **programmed cell death (apoptosis) and disintegrates entirely**, releasing its accumulated contents into the lumen. New cells are continuously produced by mitosis from progenitor cells to replace those lost.
+                    <ul>
+                        <li>**Examples:** **Sebaceous glands** (associated with hair follicles, secreting oily sebum that lubricates skin and hair).</li>
+                    </ul>
+                </li>
+            </ol>
+            <p>Mis-regulation of epithelial tissue processes, particularly the loss of normal cell polarity and the breakdown of cell-cell junctions (e.g., via Epithelial to Mesenchymal Transition [EMT]), is a critical event implicated in **cancer progression and metastasis**, allowing carcinoma cells to detach from the primary tumor, invade surrounding tissues, and spread to distant sites.</p>
+
+            <div class="question-box">
+                <div class="case-title">Case Study 5.1: Blistering Skin Condition</div>
+                <p>A patient presents with fragile blisters that are easily ruptured, leaving erosions on the skin and oral mucosa. A biopsy shows intraepidermal blistering, meaning the separation occurs *within* the epithelial layer. This condition is most likely caused by autoantibodies targeting which of the following?</p>
+                <div class="case-options">
+                    <p><strong>Question:</strong> What cellular component is targeted by autoantibodies?</p>
+                    <ul>
+                        <li><label><input type="radio" name="q5_1" value="A"> A) Tight junctions</label></li>
+                        <li><label><input type="radio" name="q5_1" value="B"> B) Hemidesmosomes</label></li>
+                        <li><label><input type="radio" name="q5_1" value="C"> C) Desmosomes</label></li>
+                        <li><label><input type="radio" name="q5_1" value="D"> D) Gap junctions</label></li>
+                    </ul>
+                </div>
+                <div class="feedback" id="feedback5_1"></div>
+            </div>
+
+            <div class="question-box">
+                <div class="case-title">Case Study 5.2: Respiratory Tract Infection</div>
+                <p>A patient with recurrent respiratory infections is found to have a genetic defect affecting the motility of cilia in their trachea. Which type of epithelium and surface specialization is primarily affected, leading to impaired mucus clearance?</p>
+                <div class="case-options">
+                    <p><strong>Question:</strong> Which epithelium and specialization are affected?</p>
+                    <ul>
+                        <li><label><input type="radio" name="q5_2" value="A"> A) Simple squamous epithelium with microvilli</label></li>
+                        <li><label><input type="radio" name="q5_2" value="B"> B) Stratified squamous epithelium with keratin</label></li>
+                        <li><label><input type="radio" name="q5_2" value="C"> C) Pseudostratified columnar epithelium with cilia</label></li>
+                        <li><label><input type="radio" name="q5_2" value="D"> D) Simple cuboidal epithelium with stereocilia</label></li>
+                    </ul>
+                </div>
+                <div class="feedback" id="feedback5_2"></div>
+            </div>
+
+            <div class="question-box">
+                <div class="case-title">Case Study 5.3: Nutrient Absorption in the Gut</div>
+                <p>The epithelial cells lining the small intestine are highly specialized for efficient nutrient absorption. Which of the following surface specializations and cell shapes are primarily responsible for this function?</p>
+                <div class="case-options">
+                    <p><strong>Question:</strong> Which specialization and cell shape facilitate nutrient absorption?</p>
+                    <ul>
+                        <li><label><input type="radio" name="q5_3" value="A"> A) Cilia on simple cuboidal cells</label></li>
+                        <li><label><input type="radio" name="q5_3" value="B"> B) Microvilli on simple columnar cells</label></li>
+                        <li><label><input type="radio" name="q5_3" value="C"> C) Stereocilia on pseudostratified cells</label></li>
+                        <li><label><input type="radio" name="q5_3" value="D"> D) Keratin on stratified squamous cells</label></li>
+                    </ul>
+                </div>
+                <div class="feedback" id="feedback5_3"></div>
+            </div>
+
+            <div class="question-box">
+                <div class="case-title">Case Study 5.4: Unique Bladder Lining</div>
+                <p>The urinary bladder's lining is unique due to its ability to stretch and distend significantly without tearing. Which type of epithelium is specifically adapted for this function?</p>
+                <div class="case-options">
+                    <p><strong>Question:</strong> Which epithelium is adapted for stretching?</p>
+                    <ul>
+                        <li><label><input type="radio" name="q5_4" value="A"> A) Simple squamous epithelium</label></li>
+                        <li><label><input type="radio" name="q5_4" value="B"> B) Stratified cuboidal epithelium</label></li>
+                        <li><label><input type="radio" name="q5_4" value="C"> C) Pseudostratified columnar epithelium</label></li>
+                        <li><label><input type="radio" name="q5_4" value="D"> D) Transitional epithelium (Urothelium)</label></li>
+                    </ul>
+                </div>
+                <div class="feedback" id="feedback5_4"></div>
+            </div>
+
+            <div class="question-box">
+                <div class="case-title">Case Study 5.5: Cancer Metastasis</div>
+                <p>During the progression of an epithelial cancer (carcinoma) to a metastatic state, the cancer cells often undergo Epithelial to Mesenchymal Transition (EMT). Which of the following is a key characteristic of EMT that allows cells to detach and become migratory?</p>
+                <div class="case-options">
+                    <p><strong>Question:</strong> What characteristic of EMT facilitates metastasis?</p>
+                    <ul>
+                        <li><label><input type="radio" name="q5_5" value="A"> A) Upregulation of tight junctions, increasing cell-cell adhesion.</label></li>
+                        <li><label><input type="radio" name="q5_5" value="B"> B) Increased expression of integrins on the apical surface.</label></li>
+                        <li><label><input type="radio" name="q5_5" value="C"> C) Downregulation of E-cadherin in adherens junctions, reducing cell-cell adhesion.</label></li>
+                        <li><label><input type="radio" name="q5_5" value="D"> D) Enhanced formation of gap junctions, promoting intercellular communication.</label></li>
+                    </ul>
+                </div>
+                <div class="feedback" id="feedback5_5"></div>
+            </div>
+
+            <div class="question-box">
+                <div class="case-title">Case Study 5.6: Sebaceous Gland Secretion</div>
+                <p>Sebaceous glands, associated with hair follicles, secrete an oily substance (sebum) that lubricates skin and hair. What is the unique mode of secretion utilized by these glands, where the entire cell disintegrates to release its contents?</p>
+                <div class="case-options">
+                    <p><strong>Question:</strong> What is the mode of secretion for sebaceous glands?</p>
+                    <ul>
+                        <li><label><input type="radio" name="q5_6" value="A"> A) Merocrine</label></li>
+                        <li><label><input type="radio" name="q5_6" value="B"> B) Apocrine</label></li>
+                        <li><label><input type="radio" name="q5_6" value="C"> C) Holocrine</label></li>
+                        <li><label><input type="radio" name="q5_6" value="D"> D) Endocrine</label></li>
+                    </ul>
+                </div>
+                <div class="feedback" id="feedback5_6"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function checkAnswer(questionId, correctAnswer, questionName) {
+            const options = document.getElementsByName(questionName);
+            const feedbackDiv = document.getElementById(`feedback${questionId}`);
+            let selectedValue = null;
+
+            for (const option of options) {
+                if (option.checked) {
+                    selectedValue = option.value;
+                    break;
+                }
+            }
+
+            if (selectedValue === null) {
+                feedbackDiv.textContent = 'Please select an answer.';
+                feedbackDiv.className = 'feedback';
+                return;
+            }
+
+            if (selectedValue === correctAnswer) {
+                feedbackDiv.textContent = '✅ Correct! Well done.';
+                feedbackDiv.className = 'feedback correct';
+            } else {
+                feedbackDiv.textContent = `❌ Incorrect. The correct answer is ${correctAnswer}.`;
+                feedbackDiv.className = 'feedback incorrect';
+            }
+
+            // Disable all options for this question after an answer is selected
+            for (const option of options) {
+                option.disabled = true;
+            }
+        }
+
+        // Attach event listeners to all radio buttons
+        document.querySelectorAll('.question-box input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', (event) => {
+                const questionName = event.target.name;
+                const questionId = questionName.replace('q', '').replace('_', '.'); // e.g., 'q1_1' -> '1.1'
+                let correctAnswer;
+
+                // Define correct answers for each question
+                switch (questionName) {
+                    case 'q1_1': correctAnswer = 'B'; break; // Cellular Energetics Q1
+                    case 'q1_2': correctAnswer = 'B'; break; // Cellular Energetics Q2
+                    case 'q1_3': correctAnswer = 'C'; break; // Cellular Energetics Q3
+                    case 'q1_4': correctAnswer = 'D'; break; // Cellular Energetics Q4
+                    case 'q1_5': correctAnswer = 'C'; break; // Cellular Energetics Q5
+
+                    case 'q2_1': correctAnswer = 'B'; break; // Glucose Homeostasis Q1
+                    case 'q2_2': correctAnswer = 'C'; break; // Glucose Homeostasis Q2
+                    case 'q2_3': correctAnswer = 'C'; break; // Glucose Homeostasis Q3
+                    case 'q2_4': correctAnswer = 'C'; break; // Glucose Homeostasis Q4
+                    case 'q2_5': correctAnswer = 'C'; break; // Glucose Homeostasis Q5
+                    case 'q2_6': correctAnswer = 'C'; break; // Glucose Homeostasis Q6
+
+                    case 'q3_1': correctAnswer = 'C'; break; // Energy Balance Q1
+                    case 'q3_2': correctAnswer = 'D'; break; // Energy Balance Q2
+                    case 'q3_3': correctAnswer = 'C'; break; // Energy Balance Q3
+                    case 'q3_4': correctAnswer = 'B'; break; // Energy Balance Q4
+                    case 'q3_5': correctAnswer = 'C'; break; // Energy Balance Q5
+
+                    case 'q4_1': correctAnswer = 'B'; break; // CBC Q1
+                    case 'q4_2': correctAnswer = 'C'; break; // CBC Q2
+                    case 'q4_3': correctAnswer = 'D'; break; // CBC Q3
+                    case 'q4_4': correctAnswer = 'D'; break; // CBC Q4
+                    case 'q4_5': correctAnswer = 'C'; break; // CBC Q5
+                    case 'q4_6': correctAnswer = 'B'; break; // CBC Q6
+
+                    case 'q5_1': correctAnswer = 'C'; break; // Epithelial Tissue Q1
+                    case 'q5_2': correctAnswer = 'C'; break; // Epithelial Tissue Q2
+                    case 'q5_3': correctAnswer = 'B'; break; // Epithelial Tissue Q3
+                    case 'q5_4': correctAnswer = 'D'; break; // Epithelial Tissue Q4
+                    case 'q5_5': correctAnswer = 'C'; break; // Epithelial Tissue Q5
+                    case 'q5_6': correctAnswer = 'C'; break; // Epithelial Tissue Q6
+
+                    default: console.error('Question not found:', questionName); return;
+                }
+                checkAnswer(questionId, correctAnswer, questionName);
+            });
+        });
+    </script>
+</body>
+</html>
